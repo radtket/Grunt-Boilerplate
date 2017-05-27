@@ -1,0 +1,227 @@
+$navigation_large: 75px;
+$navigation_small: 55px;
+
+.small-height {
+	height: $navigation_small !important;
+	.inner-nav ul li {
+		height: $navigation_small !important;
+		line-height: $navigation_small !important;
+	}
+}
+
+
+
+
+
+
+.mobile-on {
+  .desktop-nav {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    // padding: 0 15px;
+    padding: 0;
+    z-index: 100;
+    ul {
+      width: 100%;
+      float: none;
+      background: rgba($black, .97);
+      position: relative;
+      overflow-x: hidden;
+      li {
+        display: block;
+        float: none !important;
+        overflow: hidden;
+        ul {
+          padding: 0;
+          border-bottom: 1px solid rgba($white, .1);
+        }
+        a {
+          display: block;
+          width: 100%;
+          height: 38px !important;
+          line-height: 38px !important;
+          position: relative;
+          padding: 0 10px;
+          text-align: left;
+          border-left: none;
+          border-right: none;
+          border-bottom: 1px solid rgba($white, .1);;
+          color: $medium-gray;
+          letter-spacing: 1px;
+          cursor: pointer;
+          &:hover,
+          &.active {
+            background: rgba($white, .3);;
+            color: $light-gray;
+          }
+        }
+      }
+    }
+    > ul {
+      overflow-y: auto;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.mobile-nav {
+  @include margin(null $base-spacing);
+  display: none;
+  float: right;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  .fa {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 21px;
+  }
+}
+.no-js .mobile-nav {
+	@include size($navigation_small);
+}
+
+.mobile-on .mobile-nav {
+  display: table;
+  .fa {
+    color: $white;
+  }
+}
+
+
+
+
+
+
+
+.main-nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $navigation_large;
+  background: rgba(white, 0.97);
+  box-shadow: 0 1px 0 rgba($black, 0.05);
+  z-index: 1030;
+  transition: height 0.27s cubic-bezier(0, 0, 0.58, 1);
+
+  &_wrapper {
+  	@include outer-container(98%);
+    @include clearfix;
+    position: relative;
+  }
+
+  &.transparent{
+    background: transparent !important;
+  }
+  &.js-transparent{
+    transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  }
+
+  &.small-height {
+
+      a.nav-link {
+        color: $dark-gray;
+
+        &:hover,
+        &.active {
+          background-color: $dark-gray;
+          color: $white;
+        }
+      }
+
+
+.mobile-nav .fa {
+  color: $dark-gray;
+}
+
+
+
+  }
+}
+
+.nav-logo_wrap {
+  @include margin(null $small-spacing);
+  float: left;
+
+  .nav-logo {
+    display: table-cell;
+    vertical-align: middle;
+    max-width: 56px;
+    line-height: 0;
+    height: $navigation_large;
+    transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+
+    &.small-height {
+      img {
+        height: 35px;
+      }
+    }
+
+    img {
+      transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+      height: $navigation_small;
+      max-height: 100%;
+    }
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.inner-nav {
+  display: inline-block;
+  position: relative;
+  float: right;
+
+  ul {
+    float: right;
+
+    li {
+      float: left;
+      position: relative;
+      height: $navigation_large;
+      line-height: $navigation_large;
+
+      a.nav-download_btn {
+        transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+      }
+
+      a.nav-link {
+        @include padding(null $base-spacing);
+        display: inline-block;
+        transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+        
+        font-family: $heading-font-family;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: calc(12px * .3);
+        text-indent: calc(12px * .3);
+        color: $white;
+
+        &:hover,
+        &.active {
+          background-color: $white;
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+}

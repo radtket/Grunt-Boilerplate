@@ -1,0 +1,79 @@
+.hero-section {
+  background-color: #212121;
+  @include media($large-up) {
+    background-position: center top;
+  }
+}
+
+.hero-profile {
+  @include span-columns(24);
+  text-align: center;
+  @include media($medium-up) {
+    @include span-columns(12);
+  }
+  @include media($large-up) {
+    @include span-columns(10);
+    padding-top: 0;
+  }
+}
+
+
+.hero-profile_name {
+  color: $white;
+  font-size: 24px;
+  letter-spacing: calc(24px * .10);
+  text-transform: uppercase;
+}
+
+
+ .hero-profile_position {
+  color: $base-gray;
+  font-size: 20px;
+  letter-spacing: calc(20px * .3);
+  text-indent: calc(20px * .3);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  @include media($xsmall-only) {
+    margin-bottom: $base-spacing;
+  }
+ }
+
+
+ .hero-profile_text{
+  font-size: 15px;
+  font-weight: $font-weight--light;
+  color: $light-gray;
+  line-height: 1.75;
+  text-align: justify;
+}
+
+
+
+.hero-profile_image {
+  @include span-columns(24);
+  @include media($medium-up) {
+    @include span-columns(12);
+    @include pad();
+  }
+  @include media($large-up) {
+    @include span-columns(10);
+    @include shift(2);
+    padding-top: 0;
+  }
+}
+
+.signature {
+  position: relative;
+  overflow: hidden;
+  text-align: right;
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+  }
+  &--footer {
+    font-weight: 700;
+    opacity: .5;
+    text-transform: uppercase;
+  }
+}

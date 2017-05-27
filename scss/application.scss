@@ -1,11 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+
+
 @import "../node_modules/bourbon/app/assets/stylesheets/bourbon";
+
+@import "grid-settings";
 @import "../node_modules/bourbon-neat/app/assets/stylesheets/neat";
+@import "vendor/owl-carousel/owl.carousel";
+@import "vendor/owl-carousel/owl.theme.default";
 
 // Bitters
 @import "variables";
-
-// Neat Settings -- uncomment if using Neat -- must be imported before Neat
-// @import "grid-settings";
 
 @import "buttons";
 @import "forms";
@@ -13,64 +18,10 @@
 @import "tables";
 @import "typography";
 
-
-// /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
-
-// html {
-//     color: #222;
-//     font-size: 1em;
-//     line-height: 1.4;
-// }
-
-// ::-moz-selection {
-//     background: #b3d4fc;
-//     text-shadow: none;
-// }
-
-// ::selection {
-//     background: #b3d4fc;
-//     text-shadow: none;
-// }
-
-// hr {
-//     display: block;
-//     height: 1px;
-//     border: 0;
-//     border-top: 1px solid #ccc;
-//     margin: 1em 0;
-//     padding: 0;
-// }
-
-// audio,
-// canvas,
-// iframe,
-// img,
-// svg,
-// video {
-//     vertical-align: middle;
-// }
-
-// fieldset {
-//     border: 0;
-//     margin: 0;
-//     padding: 0;
-// }
-
-// textarea {
-//     resize: vertical;
-// }
-
-// .browserupgrade {
-//     margin: 0.2em 0;
-//     background: #ccc;
-//     color: #000;
-//     padding: 0.2em 0;
-// }
-
-
-// /* ==========================================================================
-//    Author's custom styles
-//    ========================================================================== */
+@import "base";
+@import "navbar";
+@import "hero";
+@import "experience";
 
 
 
@@ -81,134 +32,211 @@
 
 
 
+.container_elements {
+  @include margin(null auto);
+  @include padding(null $base-spacing);
+  max-width: 500px;
+}
+
+
+
+.row {
+	@include outer-container;
+}
+
+
+
+
+.button--col {
+	margin-bottom: 40px;
+	text-align: center;
+	@include media($medium-up) {
+		@include span-columns(8);
+		@include omega(3n);
+	}
+
+}
+
+.mb-10 {
+	margin-bottom: 10px;
+}
 
 
 
 
 
-// /* ==========================================================================
-//    Media Queries
-//    ========================================================================== */
+.footer {
+  background-color: $white;
+  @include clearfix;
 
-// @media only screen and (min-width: 35em) {
+  ul.footer-nav {
 
-// }
+    @include media($large-up) {
+	    display: inline-block;
+	    position: relative;
+	    float: left;
+    }
 
-// @media print,
-//        (-o-min-device-pixel-ratio: 5/4),
-//        (-webkit-min-device-pixel-ratio: 1.25),
-//        (min-resolution: 120dpi) {
+    li {
+      // line-height: 1.5em;
+      // padding-right: 1em;
 
-// }
+      @include media($large-up) {
+				float: left;
+				position: relative;
+				height: 75px;
+				line-height: 75px;
+      }
 
-// /* ==========================================================================
-//    Helper classes
-//    ========================================================================== */
+      a.footer-link {
+        @include padding(null $base-spacing);
+        display: inline-block;
+        transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+        
+        font-family: $heading-font-family;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: calc(12px * .3);
+        text-indent: calc(12px * .3);
+        color: #333;
 
-// .hidden {
-//     display: none !important;
-//     visibility: hidden;
-// }
+        &:hover,
+        &.active {
+          background-color: $white;
+          color: $dark-gray;
+        }
+      }
 
-// .visuallyhidden {
-//     border: 0;
-//     clip: rect(0 0 0 0);
-//     height: 1px;
-//     margin: -1px;
-//     overflow: hidden;
-//     padding: 0;
-//     position: absolute;
-//     width: 1px;
-// }
+    }
+  }
+}
 
-// .visuallyhidden.focusable:active,
-// .visuallyhidden.focusable:focus {
-//     clip: auto;
-//     height: auto;
-//     margin: 0;
-//     overflow: visible;
-//     position: static;
-//     width: auto;
-// }
 
-// .invisible {
-//     visibility: hidden;
-// }
 
-// .clearfix:before,
-// .clearfix:after {
-//     content: " ";
-//     display: table;
-// }
+.footer-social-links {
+	text-align: center;
+	color: #707070;
+	font-size: 12px;
 
-// .clearfix:after {
-//     clear: both;
-// }
+  @include media($large-up) {
+ 	    display: inline-block;
+	    position: relative;
+    float: right;
+  }
 
-// .clearfix {
-//     *zoom: 1;
-// }
+      li {
+        font-size: 1em;
+        margin-right: $small-spacing;
+	      @include media($large-up) {
+					float: left;
+					position: relative;
+					height: 75px;
+					line-height: 75px;
+	      }
+      }
 
-// /* ==========================================================================
-//    Print styles
-//    ========================================================================== */
+	a {
+		width: 36px;
+		height: 36px;
+		line-height: 35px;
+		text-align: center;
+		display: inline-block;
+		color: #474747;
+		border: 1px solid rgba(#ddd, .7);
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+		&:hover {
+			border-color: #ddd;
+		}
+	}
+}
 
-// @media print {
-//     *,
-//     *:before,
-//     *:after {
-//         background: transparent !important;
-//         color: #000 !important;
-//         box-shadow: none !important;
-//         text-shadow: none !important;
-//     }
 
-//     a,
-//     a:visited {
-//         text-decoration: underline;
-//     }
 
-//     a[href]:after {
-//         content: " (" attr(href) ")";
-//     }
 
-//     abbr[title]:after {
-//         content: " (" attr(title) ")";
-//     }
 
-//     a[href^="#"]:after,
-//     a[href^="javascript:"]:after {
-//         content: "";
-//     }
 
-//     pre,
-//     blockquote {
-//         border: 1px solid #999;
-//         page-break-inside: avoid;
-//     }
+.contact-info {
+	@include media($medium-up) {
+		@include span-columns(7 of 18);
+	}
+}
 
-//     thead {
-//         display: table-header-group;
-//     }
+.contact-form {
+	@include media($medium-up) {
+		@include span-columns(10 of 18);
+		@include shift(1);
 
-//     tr,
-//     img {
-//         page-break-inside: avoid;
-//     }
+	}
+}
 
-//     img {
-//         max-width: 100% !important;
-//     }
 
-//     p,
-//     h2,
-//     h3 {
-//         orphans: 3;
-//         widows: 3;
-//     }
 
-//     h2,
-//     h3 {
-//         page-break-after: avoid;
-//     }
-// }
+
+//fonts
+$font_0: Montserrat;
+$font_1: arial;
+$font_2: sans-serif;
+
+.contact-item {
+	padding-right: 67px !important;
+	position: relative;
+	color: rgba($black, .3);
+	text-align: right;
+	overflow: hidden;
+	margin-bottom: 40px;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+	a {
+		color: rgba($black, .3);
+		text-decoration: none;
+		&:hover {
+			color: rgba($black, .7);
+			text-decoration: none;
+		}
+	}
+	&:hover {
+		color: rgba($black, .4);
+		a {
+			color: rgba($black, .4);
+		}
+	}
+}
+.ci-icon {
+	width: 45px;
+	height: 40px;
+	position: absolute;
+	top: 4px;
+	right: 7px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 40px;
+	border-left: 1px solid rgba($black, .1);
+}
+.ci-title {
+	margin-bottom: 5px;
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.ci-phone {
+	font-size: 24px;
+	font-family: $font_0, $font_1, $font_2;
+	font-weight: 400;
+	line-height: 1.2;
+}
+.ci-text {
+	color: rgba($black, .3);
+}
+
+
+
+
+
+
+
+
+

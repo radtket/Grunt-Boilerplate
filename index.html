@@ -7,32 +7,429 @@
     <meta name="description" content="">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-
     <!-- Favicons -->
     <link rel="shortcut icon" href="img/favicons/favicon.png">
     <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
-
     <!-- CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/owl.carousel/dist/assets/owl.carousel.css">
     <link rel="stylesheet" href="dist/application.css">
-
     <!-- Modernizr -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   </head>
   <body>
     <!--[if lt IE 8]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-
-    <p>Hello world! This is HTML5 Boilerplate.</p>
-
-     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
-    <script src="dist/script.min.js"></script>
-
-  </body>
-</html>
+    <!-- Page Wrap -->
+    <div class="page" id="top">
+      <!-- Navigation panel -->
+      <nav class="main-nav transparent">
+        <div class="main-nav_wrapper">
+          <!-- Logo ( * your text or image into link tag *) -->
+          <div class="nav-logo_wrap">
+            <a href="#" class="nav-logo">
+              <img src="img/aapa.svg" alt="" />
+            </a>
+          </div>
+          <div class="mobile-nav">
+            <i class="fa fa-bars"></i>
+          </div>
+          <!-- Main Menu -->
+          <div class="inner-nav desktop-nav">
+            <ul>
+              <li class="active"><a class="nav-link" href="#">About</a></li>
+              <li><a class="nav-link" href="#">Experience</a></li>
+              <li><a class="nav-link" href="#">Skills</a></li>
+              <li><a class="nav-link" href="#">Works</a></li>
+              <li><a class="nav-link" href="#">Contact</a></li>
+              <!-- Button -->
+              <li class="nav_download">
+                <a class="btn nav-download_btn" href="#" target="_blank">
+                  <i class="fa fa-cloud-download"></i> Download CV
+                </a>
+              </li>
+              <!-- End Button -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navigation panel -->
+      <!-- Home Section -->
+      <section class="page-section hero-section" data-background="img/ece46dbd36f35314cf28ba883a808a2a9493c2b7_3-girl.jpg" id="home">
+        <div class="page-section__container">
+          <!-- Hero Content -->
+          <div class="hero-profile">
+            <h1 class="hero-profile_name">Taylor Radtke</h1>
+            <h2 class="hero-profile_position">Web Developer x Designer</h2>
+            <div class="hero-profile_text">
+              <p>Taylor Radtke is a creative mind who specializes in minimal design that displays a bold message. After three plus years of marketing in the service industry, Taylor takes his social skills mastered from constructing cocktails through college to creating a finished project that his client truly loves. A mastermind at social media marketing, with a concentration on an age demographic of 18-35. Taylor has a great latitude of culture due to his upbringing in Southern California then transitioning to the mid-Atlantic region to further his career and education. Recently Taylor has devoted his time to mastering the world of front-end web development and design. His passion for web design comes from viewing it as a functional piece of art, and striving to let his mind continue to share the beauty of digital</p>
+              <div class="signature">
+                <img src="img/siggg.svg" alt="">
+                <p class="signature--footer">
+                  <small>Taylor Radtke - a beautiful mind</small>
+                </p>
+              </div>
+              <hr>
+              <!--               <div>
+                <h4 class="hero-profile_name">Profile</h4>
+                <div>
+                  <strong>DOB:</strong>
+                  05 Dec 1993
+                </div>
+                <div>
+                  <strong>Location:</strong>
+                  Washington, DC
+                </div>
+                <div>
+                  <strong>Phone:</strong>
+                  (804) 929-7374
+                </div>
+                <div>
+                  <strong>Email:</strong>
+                  <a href="#">info@taylorradtke.com</a>
+                </div>
+                <div>
+                  <strong>Status:</strong>
+                  Available
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="hero-profile_image">
+            <img src="img/image-1.jpg" alt=""/>
+          </div>
+          <!-- End Hero Content -->
+        </div>
+      </section>
+      <!-- End Home Section -->
+      <!-- Skills Section -->
+      <section class="page-section" id="skills" style="background: #fff;">
+        <div class="page-section__container">
+          <div class="page-section__headline">
+            <h3>Skills</h3>
+            <span>01</span>
+          </div>
+          <div class="page-section__content">
+            <p class="skills-text">
+              For each project we establish relationships with partners who we know will help us create added value for your project. As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other. The way we undertake projects is based on permanently applying values that reinforce each other: socio-cultural value, experiental value, building-technical value and economical value.
+            </p>
+            <div class="row">
+              <div class="col-sm-6 mb-sm-50 mb-xs-30">
+                <ul class="list-check">
+                  <li>User Experience Design</li>
+                  <li>Interface Design</li>
+                  <li>Product Design</li>
+                  <li>Branding Design</li>
+                  <li>Digital Painting</li>
+                  <li>Video Editing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END // Skills Section -->
+      <hr class="page-section__divider">
+      <!-- Experience Section -->
+      <section class="page-section" id="experience" style="background: #fff;">
+        <div class="page-section__container">
+          <div class="page-section__headline">
+            <h3>Experience</h3>
+            <span>02</span>
+          </div>
+          <div class="page-section__content">
+            <div class="c-timeline">
+              <div class="c-timeline__item">
+                <div class="c-timeline__point"></div>
+                <div class="employers">
+                  <div class="employers--details">
+                    <div class="employers--details__timeframe">
+                      Oct 2016 – Present
+                    </div>
+                    <h3 class="employers--details__heading">
+                    AAPA
+                    </h3>
+                    <h4 class="employers--details__title">
+                    Full-Stack Web Developer
+                    </h4>
+                    <div class="employers--details__location">
+                      Alexandria, VA
+                    </div>
+                  </div>
+                  <div class="employers__description">
+                    <p>
+                      Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+                    </p>
+                  </div>
+                  </div><!-- /employers -->
+                  </div><!-- /c-timeline__item -->
+                  <div class="c-timeline__item">
+                    <div class="c-timeline__point"></div>
+                    <div class="employers">
+                      <div class="employers--details">
+                        <div class="employers--details__timeframe">
+                          Apr 2016 – Oct 2016
+                        </div>
+                        <h3 class="employers--details__heading">
+                        The Motley Fool
+                        </h3>
+                        <h4 class="employers--details__title">
+                        Front-End Web Developer
+                        </h4>
+                        <div class="employers--details__location">
+                          Alexandria, VA
+                        </div>
+                      </div>
+                      <div class="employers__description">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis.
+                        </p>
+                      </div>
+                      </div><!-- /employers -->
+                      </div><!-- /c-timeline__item -->
+                      <div class="c-timeline__item">
+                        <div class="c-timeline__point"></div>
+                        <div class="employers">
+                          <div class="employers--details">
+                            <div class="employers--details__timeframe">
+                              Nov 2015 – Apr 2016
+                            </div>
+                            <h3 class="employers--details__heading">
+                            Total Wine & More
+                            </h3>
+                            <h4 class="employers--details__title">
+                            Digital Media Designer
+                            </h4>
+                            <div class="employers--details__location">
+                              Bethesda, MD
+                            </div>
+                          </div>
+                          <div class="employers__description">
+                            <p>
+                              Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis faucibus. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh.
+                            </p>
+                          </div>
+                          </div><!-- /employers -->
+                          </div><!-- /c-timeline__item -->
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- END // Experience Section -->
+                  <hr class="page-section__divider">
+                  <!-- Clients Section -->
+                  <section class="page-section" id="clients" style="background: #fff;">
+                    <div class="page-section__container">
+                      <div class="page-section__headline">
+                        <h3>Clients</h3>
+                        <span>03</span>
+                      </div>
+                      <div class="page-section__content">
+                        <div id="clients-section" class="owl-carousel owl-theme">
+                          <div class="client-logo">
+                            <a href="#">
+                              <img src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/logo-1.jpg" alt="">
+                            </a>
+                          </div>
+                          <div class="client-logo">
+                            <a href="#">
+                              <img src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/logo-2.jpg" alt="">
+                            </a>
+                          </div>
+                          <div class="client-logo">
+                            <a href="#">
+                              <img src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/logo-3.jpg" alt="">
+                            </a>
+                          </div>
+                          <div class="client-logo">
+                            <a href="#">
+                              <img src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/logo-4.jpg" alt="">
+                            </a>
+                          </div>
+                          <div class="client-logo">
+                            <a href="#">
+                              <img src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/logo-5.jpg" alt="">
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- END // Clients Section -->
+                  <hr class="page-section__divider">
+                  <!-- Works Section -->
+                  <section class="page-section" id="works" style="background: #fff;">
+                    <div class="page-section__container">
+                      <div class="page-section__headline">
+                        <h3>Works</h3>
+                        <span>04</span>
+                      </div>
+                      <article class="page-section__content">
+                        <div class="works-item">
+                          <img src="img/projects-4.jpg">
+                        </div>
+                        <div class="works-item">
+                          <img src="img/projects-4.jpg">
+                        </div>
+                        <div class="works-item">
+                          <img src="img/projects-4.jpg">
+                        </div>
+                      </article>
+                    </div>
+                  </section>
+                  <!-- END // Works Section -->
+                  <hr class="page-section__divider">
+                  <!-- Testimonials Section -->
+                  <section class="page-section" id="Testimonials" style="background: #fff;">
+                    <div class="page-section__container">
+                      <div class="page-section__headline">
+                        <h3>Testimonials</h3>
+                        <span>05</span>
+                      </div>
+                      <article class="page-section__content">
+                        <div id="owlz" class="owl-carousel owl-theme">
+                          <blockquote>
+                            <span>
+                              <img class="avi" src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/team1.jpg" alt="">
+                            </span>
+                            <p>" I am a small start up and I went to Taylor for a website. I am on limited funds and Taylor was able to go from inception to finish on time and on budget. I was very impressed, since being on a limited budget I was expecting a generic basic product but what I received was the opposite. Taylor talked to me and got the feel for my product and direction then went to work on the site. He produced a beautiful and professionally done website. Along the way when I neededsome "tweaks" Taylor was receptive but more importantly , Available. The tweaks were done fast and to my complete satisfaction. I recommend Taylor highly . If you want Champagne on a beer budget then Taylor is your web designer. "</p>
+                            <cite>Jon Winslow - Captain Jon's Green Can Lockers</cite>
+                          </blockquote>
+                          <blockquote>
+                            <span>
+                              <img class="avi" src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/team1.jpg" alt="">
+                            </span>
+                            <p>" I've worked with Taylor on flyers, t-shirt designs, stickers, collaborations between other artist and other projects over the past 4 years. With some projects/ideas being turned around with 24 hours. Great guy, very professional and a joy to work with. "</p>
+                            <cite>Jimmy Conway - Kulture</cite>
+                          </blockquote>
+                          <blockquote>
+                            <span>
+                              <img class="avi" src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/team1.jpg" alt="">
+                            </span>
+                            <p>" Taylor did an excellent job at communicating with me. He was very conscious of everything I desired, while at the same time making the work a reality. He also gave me wonderful ideas for branding, as well as helped me push my brand in the right direction. With Taylor's help, my social media sites increased traffic over 600% in a month. I would recommend Taylor to anyone that is interested. "</p>
+                            <cite>Henri Charuau - RIFFA</cite>
+                          </blockquote>
+                        </div>
+                      </article>
+                    </div>
+                  </section>
+                  <!-- END // Testimonials Section -->
+                  <hr class="page-section__divider">
+                  <!-- Contact Section -->
+                  <section class="page-section" id="works" style="background: #fff;">
+                    <div class="page-section__container">
+                      <div class="page-section__headline">
+                        <h3>Contact</h3>
+                        <span>06</span>
+                      </div>
+                      <div class="page-section__content">
+                        <div class="contact-info">
+                          <!-- Phone -->
+                          <div class="contact-item mb-40 mb-md-20">
+                            <!-- Icon -->
+                            <div class="ci-icon">
+                              <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="ci-title">Call Us</div>
+                            <div class="ci-phone">0307-567-890</div>
+                          </div>
+                          <!-- End Phone -->
+                          <!-- Address -->
+                          <div class="contact-item mb-40 mb-md-20">
+                            <!-- Icon -->
+                            <div class="ci-icon">
+                              <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="ci-title">Address</div>
+                            <div class="ci-text">245 Quigley Blvd, Ste K</div>
+                          </div>
+                          <!-- End Address -->
+                          <!-- Email -->
+                          <div class="contact-item mb-md-40">
+                            <!-- Icon -->
+                            <div class="ci-icon">
+                              <a href="mailto:bigstream@lookandfeel.pro">
+                                <i class="fa fa-envelope"></i>
+                              </a>
+                            </div>
+                            <div class="ci-title">Say Hello</div>
+                            <div class="ci-text"><a href="mailto:bigstream@lookandfeel.pro">bigstream@lookandfeel.pro</a></div>
+                          </div>
+                          <!-- End Email -->
+                        </div>
+                        <div class="contact-form">
+                          <form class="form" id="contact_form">
+                            <div class="clearfix">
+                              <!-- Name -->
+                              <div class="form-group">
+                                <input type="text" name="name" id="name" class="input-md round form-control" placeholder="Name" pattern=".{3,100}" required="">
+                              </div>
+                              <!-- Email -->
+                              <div class="form-group">
+                                <input type="email" name="email" id="email" class="input-md round form-control" placeholder="Email" pattern=".{5,100}" required="">
+                              </div>
+                              <!-- Message -->
+                              <div class="form-group">
+                                <textarea name="message" id="message" class="input-md round form-control" style="height: 100px;" placeholder="Message"></textarea>
+                              </div>
+                            </div>
+                            <div class="clearfix">
+                              <div class="cf-left-col">
+                                <!-- Inform Tip -->
+                                <div class="form-tip pt-20">
+                                  <i class="fa fa-info-circle"></i> All the fields are required
+                                </div>
+                              </div>
+                              <div class="cf-right-col">
+                                <!-- Send Button -->
+                                <div class="align-right pt-10">
+                                  <button class="submit_btn btn btn-mod btn-medium btn-circle" id="submit_btn">Submit</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="result"></div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- END // Contact Section -->
+                  <hr class="page-section__divider">
+                  <!-- Footer Section -->
+                  <footer class="footer">
+                    <ul class="footer-nav">
+                      <li><a href="javascript:void(0)" class="footer-link">About</a></li>
+                      <li><a href="javascript:void(0)" class="footer-link">Experience</a></li>
+                      <li><a href="javascript:void(0)" class="footer-link">Skills</a></li>
+                      <li><a href="javascript:void(0)" class="footer-link">Works</a></li>
+                      <li><a href="javascript:void(0)" class="footer-link">Contact</a></li>
+                    </ul>
+                    <ul class="footer-social-links">
+                      <li>
+                        <a href="#" title="" target="_blank" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+                      </li>
+                      <li>
+                        <a href="#" title="" target="_blank" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+                      </li>
+                      <li>
+                        <a href="#" title="" target="_blank" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+                      </li>
+                      <li>
+                        <a href="#" title="" target="_blank" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+                      </li>
+                    </ul>
+                  </footer>
+                  <!-- END // Footer Section -->
+                </div>
+                <!-- JS -->
+                <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+                <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+                <script src="node_modules/owl.carousel/dist/owl.carousel.js"></script>
+                <script src="dist/script.min.js"></script>
+              </body>
+            </html>

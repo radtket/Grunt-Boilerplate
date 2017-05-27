@@ -1,0 +1,101 @@
+.c-timeline {
+  border-left-width: 0.125rem;
+  border-left-style: solid;
+  margin-left: calc(1rem - 0.125rem);
+  padding-left: $base-spacing;
+  position: relative;
+  &__item {
+    position: relative;
+  }
+
+  &__point {
+    @include size(rem(10px));
+    @include position(absolute, rem(3px) null null rem(-31px));
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px #fff;
+    background: $color-gold;
+  }
+
+  &__end {
+    height: 1px;
+    width: 16px;
+    position: absolute;
+    left: -9px;
+    bottom: 0;
+    border-width: 1px;
+    border-style: solid;
+  }
+}
+
+
+
+
+$employers-gutter: $base-spacing * 2;
+.employers {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  padding-bottom: $base-spacing;
+
+  @include media($xlarge-up) {
+    padding-bottom:$employers-gutter;
+  }
+
+  @include media($large-up) {
+    margin-right: -$employers-gutter;
+  }
+
+
+  &--details {
+    > * {
+      font-family: "Open Sans", sans-serif;
+      letter-spacing: rem(0.5px);
+      margin-bottom: $small-spacing * .66;
+    }
+    &__timeframe {
+      color: $color-gold;
+      font-size: rem(12px);
+      text-transform: uppercase;
+    }
+
+    &__heading {
+      color: #111111;
+      font-size: rem(20px);
+    }
+
+    &__title {
+      color: $base-gray;
+      font-size: rem(16px);
+    }
+
+    &__location {
+      color: $medium-gray;
+      font-size: rem(12px);
+    }
+
+
+    @include media($large-up) {
+      flex-basis: 33.88704%;
+      flex-grow: 1;
+      flex-shrink: 0;
+      overflow: hidden;
+      padding-right: $employers-gutter;
+    }
+  }
+
+  &__description {
+    @include media($large-up) {
+      flex-basis: 66.11296%;
+      flex-grow: 1;
+      flex-shrink: 0;
+      overflow: hidden;
+      padding-right: $employers-gutter;
+    }
+  }
+}
+
+
+
+
+
+

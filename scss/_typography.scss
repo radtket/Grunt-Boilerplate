@@ -1,8 +1,30 @@
+*, 
+*::after, 
+*::before {
+  box-sizing: inherit;
+}
+
+html{
+  box-sizing: border-box; 
+  overflow-y: scroll;
+  -ms-overflow-style: scrollbar;
+  background-color: tan;
+}
+
+html, body{
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+.page{
+  overflow: hidden;
+}
+
 body {
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -14,10 +36,12 @@ h6 {
   font-family: $heading-font-family;
   font-size: $base-font-size;
   line-height: $heading-line-height;
+  font-weight: $font-weight--regular;
   margin: 0 0 $small-spacing;
 }
 
 p {
+  line-height: 1.75;
   margin: 0 0 $small-spacing;
 }
 
@@ -41,8 +65,36 @@ hr {
   margin: $base-spacing 0;
 }
 
+hr.page-section__divider {
+  margin: 0;
+}
+
+
 img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+iframe {
+    border: none;
+}
+a, b, div, ul, li{
+  -webkit-tap-highlight-color: rgba(0,0,0,0); 
+  -webkit-tap-highlight-color: transparent; 
+  -moz-outline-: none;
+  outline: none;
+}
+a:focus,
+a:active{
+  -moz-outline: none;
+  outline: none;
+}
+img:not([draggable]), embed, object, video{
+    max-width: 100%;
+    height: auto;
 }

@@ -2,26 +2,51 @@
 .owl-theme {
 	// Styling Next and Prev buttons
 	.owl-nav {
-		margin-top: 10px;
 		text-align: center;
 		-webkit-tap-highlight-color: transparent;
 
 		[class*='owl-'] {
-			color: $nav-color;
-			font-size: $nav-font-size;
-			margin: $nav-margin;
-			padding: $nav-padding;
-			background: $nav-background;
-			display: inline-block;
-			cursor: pointer;
-			border-radius: 3px;
+      @include size(25px);
+      line-height: 25px !important;
+      position: relative;
+      font-size: $nav-font-size;
+      display: inline-block;
+      color: $nav-color;
+      transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+      margin: $nav-margin;
+      cursor: pointer;
 
-			&:hover {
-				background: $nav-background-hover;
-				color:$nav-color-hover;
-				text-decoration: none;
-			}
-		}
+      i {
+        @include position(relative, 0 null null 0);
+      }
+
+      span {
+        @include position(relative, 0 null null 0);
+      }
+
+      &:before {
+        @include size(100%);
+        @include position(absolute, 0 null null 0);
+        background: $nav-background;
+        content: "";
+        display: inline-block;
+        border: 1px solid $nav-color;
+        border-radius: $nav-rounded;
+        transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+      }
+
+      &:hover {
+        color: $nav-color-hover;
+
+        &:before {
+          background: $nav-background-hover;
+        }
+      }
+    }
+
+
+
+
 		.disabled {
 			opacity: $nav-disabled-opacity;
 			cursor: default;
@@ -36,27 +61,41 @@
 	.owl-dots {
 		text-align: center;
 		-webkit-tap-highlight-color: transparent;
+		position: relative;
+    margin: 0;
+    z-index: 100 !important;
+    display: block;
+    width: 100%;
 
 		.owl-dot {
 			display: inline-block;
+	    padding: $dot-padding;
 			zoom: 1;
 			*display: inline;
 
 			span {
-				width: $dot-width;
-				height: $dot-height;
-				margin: $dot-margin;
+				-webkit-backface-visibility: visible;
+				// transition: opacity 200ms ease;
 				background: $dot-background;
 				display: block;
-				-webkit-backface-visibility: visible;
-				transition: opacity 200ms ease;
-				border-radius: 30px;
+				height: $dot-height;
+				transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+				width: $dot-width;
+
+			    // background: none;
+			    // border: 1px solid #F1C40F;
+			    // display: inline-block;
+			    // height: 7px;
+			    // margin-right: 4px;
+			    // width: 30px;
+
 			}
 
 			&.active,
 			&:hover {
 				span {
 					background: $dot-background-active;
+					// background-color: #F1C40F;
 				}
 			}
 		}

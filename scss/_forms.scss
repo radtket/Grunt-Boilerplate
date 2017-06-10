@@ -19,7 +19,8 @@ label {
 
 input,
 select {
-  display: block;
+  // display: block;
+  display: inline-block;
   font-family: $base-font-family;
   font-size: $base-font-size;
 }
@@ -27,15 +28,23 @@ select {
 #{$all-text-inputs},
 select[multiple] {
   background-color: $base-background-color;
-  border: $base-border;
-  border-radius: $base-border-radius;
+  background-image: none;
+  border-radius: 0;
+  border: 1px solid $form-box-border;
   box-shadow: $form-box-shadow;
   box-sizing: border-box;
+  color: $medium-gray;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: 12px;
+  height: 38px;
+  letter-spacing: $base-letter-spacing;
   margin-bottom: $small-spacing;
-  padding: $base-spacing / 3;
+  outline: 0;
+  padding: ($small-spacing / 2) $small-spacing;
+  text-transform: uppercase;
+  transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
   transition: border-color $base-duration $base-timing;
+  vertical-align: middle;
   width: 100%;
 
   &:hover {
@@ -43,9 +52,13 @@ select[multiple] {
   }
 
   &:focus {
-    border-color: $action-color;
     box-shadow: $form-box-shadow-focus;
     outline: none;
+    // color: #111;
+    // border-color: rgba(0,0,0, .7);
+    color: $dark-gray;
+    border-color: $dark-gray;
+    box-shadow: 0 0 3px rgba(0,0,0, .3);
   }
 
   &:disabled {
@@ -60,10 +73,24 @@ select[multiple] {
 
 textarea {
   resize: vertical;
+  appearance: none;
+  background-color: $base-background-color;
+  height: 38px;
+  min-height: 65px;
+  padding: $small-spacing; // The 6px vertically centers text on FF, ignored by Webkit
 }
 
-[type="search"] {
-  appearance: none;
+// Removes awkward default styles on some inputs for iOS
+input {
+  &[type="email"],
+  &[type="number"],
+  &[type="search"],
+  &[type="text"],
+  &[type="tel"],
+  &[type="url"],
+  &[type="password"] {
+    appearance: none;
+  }
 }
 
 [type="checkbox"],
@@ -82,3 +109,6 @@ select {
   max-width: 100%;
   width: auto;
 }
+
+
+

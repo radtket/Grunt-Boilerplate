@@ -1,0 +1,96 @@
+%page-section {
+  @include fill-parent;
+  @include pad(140px $base-spacing);
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: no-repeat fixed center center;
+  background-size: cover;
+}
+
+.page-section {
+  @extend %page-section;
+  background-color: $base-background-color;
+
+  &__container {
+    @include outer-container;
+  }
+
+  &__headline {
+    @include span-columns(24);
+    position: relative;
+
+    @include media($medium-up) {
+      @include span-columns(6);
+    }
+
+    h3 {
+      color: $black;
+      display: inline-block;
+      font-size: rem(30px);
+      letter-spacing: .10em;
+      margin-bottom: rem(30px) * 2;
+      position: relative;
+      text-transform: uppercase;
+
+      &:after {
+        @include position(absolute, 0 0 null null);
+        @include size(20px 2px);
+        content: '';
+        background-color: $dark-gray;
+        background-color: $color-gold;
+      }
+    }
+    span {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: calc(30px * -.5);
+      font-size: calc(30px * 2);
+      color: rgba($dark-gray, 0.1);
+      font-weight: $font-weight--bold;
+      opacity: 0.75;
+    }
+  }
+
+  &__content {
+    @include span-columns(24);
+
+    @include media($medium-up) {
+      @include span-columns(18);
+    }
+  }
+}
+
+// Small Section
+
+.small-section {
+  @extend %page-section;
+  @include pad(70px $base-spacing);
+}
+
+.container {
+  @include outer-container;
+}
+
+.page-section,
+.home-section,
+.small-section,
+.hero-section {
+  @include media($medium-down) {
+    background-attachment: scroll;
+  }
+}
+
+/* ==============================
+   IOS Background Fix
+   ============================== */
+
+.mobile {
+  .page-section,
+  .home-section,
+  .small-section,
+  .hero-section {
+    background-attachment: scroll;
+  }
+}

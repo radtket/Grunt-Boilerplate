@@ -8,23 +8,24 @@ $color-gray:			#D6D6D6 !default;
 
 //nav
 
-$nav-color: 			$color-white !default;
-$nav-color-hover:		$color-white !default;
+$nav-color: 			$dark-gray;
+$nav-color-hover:		$color-white;
 $nav-font-size: 		14px !default;
-$nav-rounded: 			3px !default;
-$nav-margin: 			5px !default;
+$nav-rounded: 			2px !default;
+$nav-margin: 			$small-spacing ($small-spacing / 2);
 $nav-padding: 			4px 7px !default;
-$nav-background: 		$color-gray !default;
-$nav-background-hover:	$color-base !default;
+$nav-background: 		$white;
+$nav-background-hover:	$dark-gray;
 $nav-disabled-opacity: 	0.5 !default;
 
 //dots
 
-$dot-width:				10px !default;
-$dot-height:			10px !default;
+$dot-width:				$base-spacing;
+$dot-height:			3px;
 $dot-rounded:			30px !default;
 $dot-margin: 			5px 7px !default;
-$dot-background:		$color-gray !default;
-$dot-background-active:	$color-base !default;
+$dot-padding: 		6px 4px;
+$dot-background:  rgba(0,0,0, .15);
+$dot-background-active:	rgba(0,0,0, .4);
 
 @import 'theme';

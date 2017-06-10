@@ -14,13 +14,15 @@
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
     <!-- CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="scss/vendor/et-line.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-    <link rel="stylesheet" type="text/css" href="node_modules/owl.carousel/dist/assets/owl.carousel.css">
+    <!--     <link rel="stylesheet" type="text/css" href="node_modules/owl.carousel/dist/assets/owl.carousel.css"> -->
     <link rel="stylesheet" href="dist/application.css">
     <!-- Modernizr -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   </head>
   <body>
+  <div class="se-pre-con"></div>
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -32,7 +34,7 @@
           <!-- Logo ( * your text or image into link tag *) -->
           <div class="nav-logo_wrap">
             <a href="#" class="nav-logo">
-              <img src="img/aapa.svg" alt="" />
+              <img src="img/logo__primary.svg" alt="" />
             </a>
           </div>
           <div class="mobile-nav">
@@ -48,7 +50,7 @@
               <li><a class="nav-link" href="#">Contact</a></li>
               <!-- Button -->
               <li class="nav_download">
-                <a class="btn nav-download_btn" href="#" target="_blank">
+                <a class="btn btn-border-w nav-download_btn" href="#" target="_blank">
                   <i class="fa fa-cloud-download"></i> Download CV
                 </a>
               </li>
@@ -62,14 +64,14 @@
       <section class="page-section hero-section" data-background="img/ece46dbd36f35314cf28ba883a808a2a9493c2b7_3-girl.jpg" id="home">
         <div class="page-section__container">
           <!-- Hero Content -->
-          <div class="hero-profile">
-            <h1 class="hero-profile_name">Taylor Radtke</h1>
-            <h2 class="hero-profile_position">Web Developer x Designer</h2>
-            <div class="hero-profile_text">
+          <div class="hero--profile">
+            <h1 class="hero--profile__name">Taylor Radtke</h1>
+            <h2 class="hero--profile__position">Web Developer x Designer</h2>
+            <div class="hero--profile__text">
               <p>Taylor Radtke is a creative mind who specializes in minimal design that displays a bold message. After three plus years of marketing in the service industry, Taylor takes his social skills mastered from constructing cocktails through college to creating a finished project that his client truly loves. A mastermind at social media marketing, with a concentration on an age demographic of 18-35. Taylor has a great latitude of culture due to his upbringing in Southern California then transitioning to the mid-Atlantic region to further his career and education. Recently Taylor has devoted his time to mastering the world of front-end web development and design. His passion for web design comes from viewing it as a functional piece of art, and striving to let his mind continue to share the beauty of digital</p>
-              <div class="signature">
-                <img src="img/siggg.svg" alt="">
-                <p class="signature--footer">
+              <div class="hero--signature">
+                <img src="img/signature.svg" alt="">
+                <p class="hero--signature__footer">
                   <small>Taylor Radtke - a beautiful mind</small>
                 </p>
               </div>
@@ -99,15 +101,15 @@
               </div> -->
             </div>
           </div>
-          <div class="hero-profile_image">
-            <img src="img/image-1.jpg" alt=""/>
+          <div class="hero--profile__image">
+            <img src="img/hero__avitar.jpg" alt=""/>
           </div>
           <!-- End Hero Content -->
         </div>
       </section>
       <!-- End Home Section -->
       <!-- Skills Section -->
-      <section class="page-section" id="skills" style="background: #fff;">
+      <section class="page-section" id="skills">
         <div class="page-section__container">
           <div class="page-section__headline">
             <h3>Skills</h3>
@@ -117,25 +119,21 @@
             <p class="skills-text">
               For each project we establish relationships with partners who we know will help us create added value for your project. As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other. The way we undertake projects is based on permanently applying values that reinforce each other: socio-cultural value, experiental value, building-technical value and economical value.
             </p>
-            <div class="row">
-              <div class="col-sm-6 mb-sm-50 mb-xs-30">
-                <ul class="list-check">
-                  <li>User Experience Design</li>
-                  <li>Interface Design</li>
-                  <li>Product Design</li>
-                  <li>Branding Design</li>
-                  <li>Digital Painting</li>
-                  <li>Video Editing</li>
-                </ul>
-              </div>
-            </div>
+            <ul class="list-check">
+              <li>User Experience Design</li>
+              <li>Interface Design</li>
+              <li>Product Design</li>
+              <li>Branding Design</li>
+              <li>Digital Painting</li>
+              <li>Video Editing</li>
+            </ul>
           </div>
         </div>
       </section>
       <!-- END // Skills Section -->
       <hr class="page-section__divider">
       <!-- Experience Section -->
-      <section class="page-section" id="experience" style="background: #fff;">
+      <section class="page-section" id="experience">
         <div class="page-section__container">
           <div class="page-section__headline">
             <h3>Experience</h3>
@@ -222,39 +220,110 @@
                   <!-- END // Experience Section -->
                   <hr class="page-section__divider">
                   <!-- Clients Section -->
-                  <section class="page-section" id="clients" style="background: #fff;">
+                  <section class="page-section" id="clients">
                     <div class="page-section__container">
                       <div class="page-section__headline">
                         <h3>Clients</h3>
                         <span>03</span>
                       </div>
                       <div class="page-section__content">
-                        <div id="clients-section" class="owl-carousel owl-theme">
-                          <div class="client-logo">
-                            <a href="#">
-                              <img src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/logo-1.jpg" alt="">
-                            </a>
-                          </div>
-                          <div class="client-logo">
-                            <a href="#">
-                              <img src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/logo-2.jpg" alt="">
-                            </a>
-                          </div>
-                          <div class="client-logo">
-                            <a href="#">
-                              <img src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/logo-3.jpg" alt="">
-                            </a>
-                          </div>
-                          <div class="client-logo">
-                            <a href="#">
-                              <img src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/logo-4.jpg" alt="">
-                            </a>
-                          </div>
-                          <div class="client-logo">
-                            <a href="#">
-                              <img src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/logo-5.jpg" alt="">
-                            </a>
-                          </div>
+                        <div id="clients__slider" class="owl-carousel owl-theme">
+                          <!--                           <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__twm.svg" alt="">
+                          </a>
+                          <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__motleyFool.svg" alt="">
+                          </a>
+                          <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__belleAndJames.svg" alt="">
+                          </a>
+                          <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__aapa.svg" alt="">
+                          </a>
+                          <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__atown.png" alt="">
+                          </a>
+                          <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__donTito.svg" alt="">
+                          </a>
+                          <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__kabin.png" alt="">
+                          </a>
+                          <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__rs.svg" alt="">
+                          </a>
+                          <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__brown.png" alt="">
+                          </a>
+                          <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__kulture.png" alt="">
+                          </a>
+                          <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__riffa.svg" alt="">
+                          </a>
+                          <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__fish.svg" alt="">
+                          </a>
+                          <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__phenom.svg" alt="">
+                          </a>
+                          <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__beatdown.svg" alt="">
+                          </a>
+                          <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__crva.svg" alt="">
+                          </a>
+                          <a href="#" class="client-logo">
+                            <img class="logo" src="img/clients/clients__kai.svg"" alt="">
+                          </a> -->
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__twm.svg" alt="">
+                          </a>
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__motleyFool.svg" alt="">
+                          </a>
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__belleAndJames.svg" alt="">
+                          </a>
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__aapa.svg" alt="">
+                          </a>
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__atown.png" alt="">
+                          </a>
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__donTito.svg" alt="">
+                          </a>
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__kabin.png" alt="">
+                          </a>
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__rs.svg" alt="">
+                          </a>
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__brown.png" alt="">
+                          </a>
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__kulture.png" alt="">
+                          </a>
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__riffa.svg" alt="">
+                          </a>
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__fish.svg" alt="">
+                          </a>
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__phenom.svg" alt="">
+                          </a>
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__beatdown.svg" alt="">
+                          </a>
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__crva.svg" alt="">
+                          </a>
+                          <a href="#" class="logo-item">
+                            <img src="img/clients/clients__kai.svg"" alt="">
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -262,7 +331,7 @@
                   <!-- END // Clients Section -->
                   <hr class="page-section__divider">
                   <!-- Works Section -->
-                  <section class="page-section" id="works" style="background: #fff;">
+                  <section class="page-section" id="works">
                     <div class="page-section__container">
                       <div class="page-section__headline">
                         <h3>Works</h3>
@@ -284,31 +353,31 @@
                   <!-- END // Works Section -->
                   <hr class="page-section__divider">
                   <!-- Testimonials Section -->
-                  <section class="page-section" id="Testimonials" style="background: #fff;">
+                  <section class="page-section" id="testimonials">
                     <div class="page-section__container">
                       <div class="page-section__headline">
                         <h3>Testimonials</h3>
                         <span>05</span>
                       </div>
                       <article class="page-section__content">
-                        <div id="owlz" class="owl-carousel owl-theme">
+                        <div id="testimonial__slider" class="owl-carousel owl-theme">
                           <blockquote>
                             <span>
-                              <img class="avi" src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/team1.jpg" alt="">
+                              <img class="avi" src="img/testimonial__jon.jpg" alt="">
                             </span>
                             <p>" I am a small start up and I went to Taylor for a website. I am on limited funds and Taylor was able to go from inception to finish on time and on budget. I was very impressed, since being on a limited budget I was expecting a generic basic product but what I received was the opposite. Taylor talked to me and got the feel for my product and direction then went to work on the site. He produced a beautiful and professionally done website. Along the way when I neededsome "tweaks" Taylor was receptive but more importantly , Available. The tweaks were done fast and to my complete satisfaction. I recommend Taylor highly . If you want Champagne on a beer budget then Taylor is your web designer. "</p>
                             <cite>Jon Winslow - Captain Jon's Green Can Lockers</cite>
                           </blockquote>
                           <blockquote>
                             <span>
-                              <img class="avi" src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/team1.jpg" alt="">
+                              <img class="avi" src="img/testimonial__jimmy.jpg" alt="">
                             </span>
                             <p>" I've worked with Taylor on flyers, t-shirt designs, stickers, collaborations between other artist and other projects over the past 4 years. With some projects/ideas being turned around with 24 hours. Great guy, very professional and a joy to work with. "</p>
                             <cite>Jimmy Conway - Kulture</cite>
                           </blockquote>
                           <blockquote>
                             <span>
-                              <img class="avi" src="http://www.spab-rice.com/themeforest/pond/demo/files/uploads/team1.jpg" alt="">
+                              <img class="avi" src="img/testimonial__henri.jpg" alt="">
                             </span>
                             <p>" Taylor did an excellent job at communicating with me. He was very conscious of everything I desired, while at the same time making the work a reality. He also gave me wonderful ideas for branding, as well as helped me push my brand in the right direction. With Taylor's help, my social media sites increased traffic over 600% in a month. I would recommend Taylor to anyone that is interested. "</p>
                             <cite>Henri Charuau - RIFFA</cite>
@@ -320,80 +389,70 @@
                   <!-- END // Testimonials Section -->
                   <hr class="page-section__divider">
                   <!-- Contact Section -->
-                  <section class="page-section" id="works" style="background: #fff;">
+                  <section class="page-section" id="contact">
                     <div class="page-section__container">
                       <div class="page-section__headline">
                         <h3>Contact</h3>
                         <span>06</span>
                       </div>
                       <div class="page-section__content">
-                        <div class="contact-info">
+                        <div class="contact--info">
                           <!-- Phone -->
-                          <div class="contact-item mb-40 mb-md-20">
+                          <div class="contact--info__item">
                             <!-- Icon -->
-                            <div class="ci-icon">
+                            <div class="contact--info__icon">
                               <i class="fa fa-phone"></i>
                             </div>
-                            <div class="ci-title">Call Us</div>
-                            <div class="ci-phone">0307-567-890</div>
+                            <span class="contact--info__title">Phone</span>
+                            <span class="contact--info__text">804-929-7374</span>
                           </div>
                           <!-- End Phone -->
                           <!-- Address -->
-                          <div class="contact-item mb-40 mb-md-20">
+                          <div class="contact--info__item">
                             <!-- Icon -->
-                            <div class="ci-icon">
+                            <div class="contact--info__icon">
                               <i class="fa fa-map-marker"></i>
                             </div>
-                            <div class="ci-title">Address</div>
-                            <div class="ci-text">245 Quigley Blvd, Ste K</div>
+                            <span class="contact--info__title">Location</span>
+                            <span class="contact--info__text">Washington DC</span>
                           </div>
                           <!-- End Address -->
                           <!-- Email -->
-                          <div class="contact-item mb-md-40">
+                          <div class="contact--info__item">
                             <!-- Icon -->
-                            <div class="ci-icon">
-                              <a href="mailto:bigstream@lookandfeel.pro">
+                            <div class="contact--info__icon">
+                              <a href="mailto:info@taylorradtke.com">
                                 <i class="fa fa-envelope"></i>
                               </a>
                             </div>
-                            <div class="ci-title">Say Hello</div>
-                            <div class="ci-text"><a href="mailto:bigstream@lookandfeel.pro">bigstream@lookandfeel.pro</a></div>
+                            <span class="contact--info__title">Email</span>
+                            <a class="contact--info__text" href="mailto:info@taylorradtke.com">info@taylorradtke.com</a>
                           </div>
                           <!-- End Email -->
                         </div>
-                        <div class="contact-form">
-                          <form class="form" id="contact_form">
-                            <div class="clearfix">
-                              <!-- Name -->
-                              <div class="form-group">
-                                <input type="text" name="name" id="name" class="input-md round form-control" placeholder="Name" pattern=".{3,100}" required="">
-                              </div>
-                              <!-- Email -->
-                              <div class="form-group">
-                                <input type="email" name="email" id="email" class="input-md round form-control" placeholder="Email" pattern=".{5,100}" required="">
-                              </div>
-                              <!-- Message -->
-                              <div class="form-group">
-                                <textarea name="message" id="message" class="input-md round form-control" style="height: 100px;" placeholder="Message"></textarea>
-                              </div>
+                        <form id="contact_form" class="contact-form">
+                          <div class="clearfix">
+                            <!-- Name -->
+                            <input type="text" name="name" id="name" placeholder="Name" pattern=".{3,100}" required="">
+                            <!-- Email -->
+                            <input type="email" name="email" id="email" placeholder="Email" pattern=".{5,100}" required="">
+                            <!-- Message -->
+                            <textarea name="message" id="message" placeholder="Message"></textarea>
+                          </div>
+                          <div class="clearfix">
+                            <!-- Inform Tip -->
+                            <div class="form-tip">
+                              <i class="fa fa-info-circle"></i> All the fields are required
                             </div>
-                            <div class="clearfix">
-                              <div class="cf-left-col">
-                                <!-- Inform Tip -->
-                                <div class="form-tip pt-20">
-                                  <i class="fa fa-info-circle"></i> All the fields are required
-                                </div>
-                              </div>
-                              <div class="cf-right-col">
-                                <!-- Send Button -->
-                                <div class="align-right pt-10">
-                                  <button class="submit_btn btn btn-mod btn-medium btn-circle" id="submit_btn">Submit</button>
-                                </div>
-                              </div>
+                            <div class="form-button">
+                              <!-- Send Button -->
+                              <button id="submit_btn" class="submit_btn btn btn-mod btn-circle">
+                              <i class="fa fa-paper-plane-o"></i> Submit
+                              </button>
                             </div>
-                            <div id="result"></div>
-                          </form>
-                        </div>
+                          </div>
+                          <div id="result"></div>
+                        </form>
                       </div>
                     </div>
                   </section>
@@ -401,27 +460,26 @@
                   <hr class="page-section__divider">
                   <!-- Footer Section -->
                   <footer class="footer">
-                    <ul class="footer-nav">
-                      <li><a href="javascript:void(0)" class="footer-link">About</a></li>
-                      <li><a href="javascript:void(0)" class="footer-link">Experience</a></li>
-                      <li><a href="javascript:void(0)" class="footer-link">Skills</a></li>
-                      <li><a href="javascript:void(0)" class="footer-link">Works</a></li>
-                      <li><a href="javascript:void(0)" class="footer-link">Contact</a></li>
-                    </ul>
-                    <ul class="footer-social-links">
-                      <li>
-                        <a href="#" title="" target="_blank" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
-                      </li>
-                      <li>
-                        <a href="#" title="" target="_blank" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
-                      </li>
-                      <li>
-                        <a href="#" title="" target="_blank" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
-                      </li>
-                      <li>
-                        <a href="#" title="" target="_blank" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
-                      </li>
-                    </ul>
+                    <div class="footer__wrapper">
+                      <p class="copyright">© 2017 <a href="#">Taylor Radtke</a>, All Rights Reserved.</p>
+                      <ul class="footer-social-linkz">
+                        <li>
+                          <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                          <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="#" title="Behance" target="_blank"><i class="fa fa-behance"></i></a>
+                        </li>
+                        <li>
+                          <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                          <a href="#" title="Pinterest" target="_blank"><i class="fa fa-pinterest"></i></a>
+                        </li>
+                      </ul>
+                    </div>
                   </footer>
                   <!-- END // Footer Section -->
                 </div>
@@ -429,7 +487,6 @@
                 <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
                 <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-                <script src="node_modules/owl.carousel/dist/owl.carousel.js"></script>
                 <script src="dist/script.min.js"></script>
               </body>
             </html>

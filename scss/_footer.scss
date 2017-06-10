@@ -1,0 +1,83 @@
+.footer {
+  background-color: $white;
+  font-size: 14px;
+  text-align: center;
+  @include media($xsmall-only) {
+    @include padding($base-spacing null);
+  }
+
+  &__wrapper {
+    @include outer-container(98%);
+  }
+
+  .copyright {
+    font-family: $heading-font-family;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: calc(12px * .3);
+    text-indent: calc(12px * .3);
+    
+    @include media($small-up) {
+      margin: 0;
+      display: inline-block;
+      position: relative;
+      float: left;
+      height: 75px;
+      line-height: 75px;
+    }
+  }
+
+  .footer-social-linkz {
+    display: inline-block;
+    @include media($small-up) {
+      float: right;
+    }
+
+
+    li {
+      margin-right: 1rem;
+      float: left;
+      position: relative;
+      @include media($small-up) {
+        height: 75px;
+        line-height: 75px;
+      }
+    }
+
+    a {
+      @include size(25px);
+      line-height: 25px !important;
+      position: relative;
+      display: inline-block;
+      color: $dark-gray;
+      transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+
+      i {
+        @include position(relative, 0 null null 0);
+      }
+
+      span {
+        @include position(relative, 0 null null 0);
+      }
+
+      &:before {
+        @include size(100%);
+        @include position(absolute, 0 null null 0);
+        content: "";
+        display: inline-block;
+        border: 1px solid $dark-gray;
+        border-radius: 2px;
+        transform: rotate(45deg);
+        transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+      }
+
+      &:hover {
+        color: $white;
+
+        &:before {
+          background: $dark-gray;
+        }
+      }
+    }
+  }
+}

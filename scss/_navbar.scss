@@ -116,7 +116,7 @@ $navigation_small: 55px;
   width: 100%;
   height: $navigation_large;
   background: rgba(white, 0.97);
-  box-shadow: 0 1px 0 rgba($black, 0.05);
+
   z-index: 1030;
   transition: height 0.27s cubic-bezier(0, 0, 0.58, 1);
 
@@ -134,7 +134,8 @@ $navigation_small: 55px;
   }
 
   &.small-height {
-
+  box-shadow: 0 1px 1px rgba($black, 0.05);
+  // box-shadow: 0 1px 1px rgba($black,0.5);
       a.nav-link {
         color: $dark-gray;
 
@@ -162,13 +163,13 @@ $navigation_small: 55px;
   .nav-logo {
     display: table-cell;
     vertical-align: middle;
-    max-width: 56px;
     line-height: 0;
     height: $navigation_large;
     transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
 
     &.small-height {
       img {
+        filter: invert(0%);
         height: 35px;
       }
     }
@@ -177,6 +178,7 @@ $navigation_small: 55px;
       transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
       height: $navigation_small;
       max-height: 100%;
+      filter: invert(100%);
     }
 
     &:before,
@@ -201,14 +203,13 @@ $navigation_small: 55px;
       line-height: $navigation_large;
 
       a.nav-download_btn {
-        transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+        @include margin(null $small-spacing);
       }
 
       a.nav-link {
         @include padding(null $base-spacing);
         display: inline-block;
         transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
-        
         font-family: $heading-font-family;
         text-transform: uppercase;
         font-size: 12px;
@@ -224,4 +225,17 @@ $navigation_small: 55px;
       }
     }
   }
+}
+
+
+
+
+
+
+
+
+.no-svg .logo {
+  width: 200px;
+  height: 164px;
+  background-image: url(kiwi.png);
 }

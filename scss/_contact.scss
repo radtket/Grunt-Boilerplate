@@ -1,0 +1,97 @@
+.contact-form {
+  @include media($medium-up) {
+    @include span-columns(9 of 18);
+    @include shift(1);
+  }
+  @include media($large-up) {
+    @include span-columns(10 of 18);
+    @include shift(2);
+  }
+  textarea {
+    height: 100px;
+  }
+}
+
+.contact--info {
+  @include media($medium-up) {
+    @include span-columns(8 of 18);
+  }
+
+
+  @include media($large-up) {
+    @include span-columns(6 of 18);
+  }
+
+
+  &__item {
+    position: relative;
+    color: $medium-gray;
+    overflow: hidden;
+    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    margin-bottom: $base-spacing;
+    text-align: center;
+
+    @include media($medium-up) {
+      padding-right: 67.5px;
+      text-align: right;
+      margin-bottom: $base-spacing * 1.5;
+    }
+
+
+    a {
+      color: $medium-gray;
+    }
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.7);
+
+      a {
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+
+  &__icon {
+    @include margin(0 auto 7.5px);
+    @include size(45px 40px);
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid $form-box-border;
+
+    @include media($medium-up) {
+      @include position(absolute, 4px 7.5px null null);
+      margin: 0;
+      border-bottom: none;
+      border-left: 1px solid $form-box-border;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: $base-letter-spacing;
+  }
+}
+
+.clearfix {
+  @include clearfix;
+  .form-tip {
+    padding-top: $small-spacing;
+    font-size: 12px;
+    color: $medium-gray;
+    @include media($medium-up) {
+      @include span-columns(12);
+    }
+  }
+  .form-button {
+    text-align: right;
+    padding-top: $small-spacing / 2;
+    @include media($medium-up) {
+      @include span-columns(12);
+    }
+  }
+}

@@ -7,6 +7,7 @@
     --------------------------------------------- */
 
     $(window).on('load', function() {
+        $(".se-pre-con").fadeOut("slow");;
         $(window).trigger("scroll");
         $(window).trigger("resize");
     });
@@ -122,10 +123,11 @@
             if ($(window).scrollTop() > 10) {
                 $(".js-transparent").removeClass("transparent");
                 $(".main-nav, .nav-logo, .mobile-nav, .nav_download").addClass("small-height");
+                $(".nav-download_btn").removeClass("btn-border-w");
             } else {
                 $(".js-transparent").addClass("transparent");
                 $(".main-nav, .nav-logo, .mobile-nav, .nav_download").removeClass("small-height");
-
+                $(".nav-download_btn").addClass("btn-border-w");
             }
         });
 
@@ -144,33 +146,43 @@ function initPageSliders() {
         "use strict";
 
         // Testimonial Slider
-        $('#owlz').owlCarousel({
+        $('#testimonial__slider').owlCarousel({
             items: 1,
-            autoPlay: 2000,
             loop: true,
-            nav: false,
-            pagination: false
+            nav: true,
+            center: true,
+            autoHeight: true,
+            navText: [
+              "<i class='fa fa-angle-left'></i>",
+              "<i class='fa fa-angle-right'></i>"
+            ],
         })
 
         // Client Logo slider
-        $('#clients-section').owlCarousel({
+        $('#clients__slider').owlCarousel({
             items: 3,
-            autoPlay: 2000,
             loop: true,
-            nav: false,
             pagination: false,
+            nav: true,
             responsiveClass: true,
+            dots: false,
+            autoplay: true,
+            navText: [
+              "<i class='fa fa-angle-left'></i>",
+              "<i class='fa fa-angle-right'></i>"
+            ],
             responsive: {
                 0: {
-                    items: 2,
-                    nav: true
+                    items: 1,
                 },
                 600: {
                     items: 3,
-                    nav: false
+                    slideBy: 3,
+                    autoplayHoverPause: true,
                 }
             }
         });
+
 
     })(jQuery);
 };

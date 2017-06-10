@@ -12,6 +12,7 @@ $font-weight--black      : 900;
 
 // Font Sizes
 $base-font-size: 16px;
+$base-letter-spacing: rem(0.5px);
 
 // Line height
 $base-line-height: 1.5;
@@ -39,6 +40,8 @@ $light-gray: #ddd;
 
 $base-gray: #666;
 $color-gold: #c0a062;
+// $color-gold:#a49260;
+$black-matte: #101010;
 
 // Font Colors
 $base-font-color: $dark-gray;
@@ -49,11 +52,12 @@ $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$base-background-color: #fff;
+$base-background-color: $white;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-border: rgba($black, .2);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 
 // Animations

@@ -1,183 +1,83 @@
-%page-section {
-  width: 100%;
-  display: block;
-  position: relative;
-  overflow: hidden;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  box-sizing: border-box;
-  padding: 140px $base-spacing;
-}
-
-.page-section {
-  @extend %page-section;
-
-  &__container {
-    @include outer-container;
-  }
-
-  &__headline {
-    @include span-columns(24);
-    position: relative;
-
-    @include media($medium-up) {
-      @include span-columns(6);
-    }
-
-    h3 {
-      color: $black;
-      display: inline-block;
-      font-size: 30px;
-      letter-spacing: calc(30px * .10);
-      margin-bottom: 70px;
-      position: relative;
-      text-transform: uppercase;
-
-      &:after {
-        content: '';
-        position: absolute;
-        right: 0;
-        height: 2px;
-        width: 20px;
-        background: $dark-gray;
-        top: 0;
-      }
-    }
-    span {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: calc(30px * -.5);
-      font-size: calc(30px * 2);
-      color: rgba(68, 68, 68, 0.1);
-      font-weight: $font-weight--bold;
-      opacity: 0.75;
-    }
-  }
-
-  &__content {
-    @include span-columns(24);
-
-    @include media($medium-up) {
-      @include span-columns(18);
-    }
-  }
-}
-
-// Small Section
-
-.small-section {
-  @extend %page-section;
-  padding: 70px 0;
-}
-
-.small-title {
-  padding: 0;
-  margin: 0 0 30px 0;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: 300;
-  letter-spacing: 0.3em;
-}
-
-.container {
-  @include outer-container;
-}
-
-.page-section,
-.home-section,
-.small-section,
-.hero-section {
-  @include media($medium-down) {
-    background-attachment: scroll;
-  }
-
-
-  @include media($small-down) {
-    background-size: 100%;
-    background-position: center top;
-  }
-}
-
-/* ==============================
-   IOS Background Fix
-   ============================== */
-
-.mobile {
-  .page-section,
-  .home-section,
-  .small-section,
-  .hero-section {
-    background-attachment: scroll;
-  }
-}
-
-
-
-
-
 /* ==============================
    Skills
    ============================== */
 
-
-
 #skills {
   .page-section__content {
-    line-height: 1.75;
     color: $base-gray;
   }
   p.skills-text {
-    margin-bottom: 50px;
-
+    margin-bottom: $base-spacing * 2;
     @include media($xsmall-only) {
       margin-bottom: $base-spacing;
     }
   }
-}
-
-.list-check {
-  margin-top: $small-spacing;
-  display: inline-block;
-
-  li {
-    float: left;
-    position: relative;
-    width: 50%;
-
-    &::before {
-      content: "\f00c";
-      font-family: fontawesome;
-      color: $color-gold;
-      margin-right: $small-spacing;
+  .list-check {
+    @include row;
+    li {
+      @include span-columns(12);
+      @include omega(2n);
+      position: relative;
+      &:before {
+        content: "\f00c";
+        font-family: fontawesome;
+        color: $color-gold;
+        margin-right: $small-spacing;
+      }
     }
   }
 }
-
-
-
 
 /* ==============================
-   Main Page Sections
+   Client Slider
    ============================== */
 
-.client-logo {
-  margin: 0 50px;
+#clients__slider {
+  .owl-item {
+    height: 100px;
+    text-align: center;
 
-  a {
-    display: block;
-    opacity: .6;
-    transition: all .25s ease-in-out;
+    a.client-logo {
+      display: inline-block;
+      margin: 0 10%;
 
-    &:hover {
-      opacity: .8;
+      img.logo {
+        display: block;
+        margin: auto;
+        height: 100px;
+        filter: grayscale(100%);
+        transition: all 300ms linear;
+
+        &:hover {
+          filter: none;
+        }
+      }
     }
   }
 }
 
 
+
+.logo-item {
+  height: 80px;
+  text-align: center;
+  opacity: .65;
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+
+  // added by me
+  margin: 0 10%;
+  display: inline-flex;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
 
 /* ==============================
    Works Section
@@ -186,59 +86,3 @@
 .works-item {
   @include span-columns(6 of 18);
 }
-
-
-
-
-
-// Testimonial 
-
-blockquote {
-  font-weight: 300;
-  width: 100%;
-  padding-left: .5rem;
-  padding-right: .5rem;
-  margin: auto;
-  text-align: center;
-
-  span {
-    margin-bottom: $small-spacing;
-    display: inline-block;
-    img.avi {
-      width: 60px !important;
-      height: 60px !important;
-      border-radius: 50%;
-      margin: auto;
-    }
-  }
-  p {
-    margin-bottom: 0;
-    font-size: 18px;
-  }
-  cite {
-    display: block;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

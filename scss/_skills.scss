@@ -1,0 +1,29 @@
+/* ==============================
+   Skills
+   ============================== */
+
+#skills {
+  .page-section__content {
+    color: $base-gray;
+  }
+  p.skills-text {
+    margin-bottom: $base-spacing * 2;
+    @include media($xsmall-only) {
+      margin-bottom: $base-spacing;
+    }
+  }
+  .list-check {
+    @include row;
+    li {
+      @include span-columns(12);
+      @include omega(2n);
+      position: relative;
+      &:before {
+        content: "\f00c";
+        font-family: fontawesome;
+        color: $color-gold;
+        margin-right: $small-spacing;
+      }
+    }
+  }
+}

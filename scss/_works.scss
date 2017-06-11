@@ -1,0 +1,228 @@
+/* ==============================
+   Works Section
+   ============================== */
+
+.works-item {
+  @include span-columns(6 of 18);
+}
+
+
+
+/* Controls
+---------------------------------------------------------------------- */
+
+.controls {
+  margin-bottom: $base-spacing * 2;
+  text-align: center;
+  cursor: default;
+}
+
+.control {
+  display: inline-block;
+  color: $medium-gray;
+  transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  cursor: pointer;
+  font-family: $heading-font-family;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: calc(14px * .3);
+  text-indent: calc(14px * .3);
+  position: relative;
+  @include margin(null $base-spacing null null);
+  &:last-of-type {
+    @include margin(0);
+  }
+  &:hover {
+    color: $black;
+  }
+  @include media($small-down) {
+    @include margin(null $small-spacing null null);
+  }
+  // @include media($xsmall-only) {
+  //   @include margin(0 0 $small-spacing);
+  //   display: block;
+  // }
+  > span {
+    position: relative;
+    display: inline-block;
+    &:after {
+      @include position(absolute, 0 2px null null);
+      @include size(12px 2px);
+      content: "";
+      background-color: transparent;
+    }
+  }
+}
+
+.mixitup-control-active {
+  color: $black;
+  cursor: default;
+  > span:after {
+    background-color: $color-gold;
+  }
+  
+}
+
+/* Container
+---------------------------------------------------------------------- */
+
+.mix__container {
+  @include outer-container;
+}
+
+/* Target Elements
+---------------------------------------------------------------------- */
+
+.mix {
+  background: red;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  outline: 0;
+  width: 33.2%;
+  float: left;
+
+  @include media($xsmall-only) {
+    // width: 100%;
+    // float: none;
+    width: 50%;
+  }
+
+  &:hover {
+    .work-intro {
+      opacity: 1;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+    }
+
+    .work-img {
+      &:after {
+        background: rgba(20, 20, 20, 0.85);
+        overflow: hidden;
+        // background: rgba($white, 0.9);
+        // background: $color-gold;
+        // opacity: .73;
+      }
+
+      > img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  > a {
+    @include size(100%);
+    @include padding(0);
+    @include position(relative, 0 null null 0);
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: none;
+    outline: 0;
+
+    &:hover {
+      color: #111;
+      border: none;
+      outline: 0;
+    }
+  }
+
+  .work-img {
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      @include position(absolute, 0 null null 0);
+      @include size(100%);
+      overflow: hidden;
+      content: " ";
+      display: block;
+      background: rgba($black, 0);
+      transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    }
+
+    > img {
+      transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      overflow: hidden;
+    }
+  }
+
+  .work-intro {
+    @include position(absolute, 40% null null 0);
+    @include padding($small-spacing);
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    opacity: 0;
+    text-transform: uppercase;
+  }
+
+  .work-title {
+    @include padding(0);
+    @include margin(0 0 8px 0);
+    text-transform: uppercase;
+    font-family: $heading-font-family;
+    font-size: 13px;
+    letter-spacing: calc(13px * .3);
+    text-indent: calc(13px * .3);
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    line-height: $heading-line-height;
+    color: $color-gold;
+  }
+
+  .work-descr {
+    font-size: 11px;
+    color: $light-gray;
+    line-height: 1.2;
+    display: block;
+  }
+
+}
+
+/* Grid Breakpoints
+---------------------------------------------------------------------- */
+
+// /* 2 Columns */
+
+// .mix,
+// .gap {
+//     width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
+// }
+
+// /* 3 Columns */
+
+// @media screen and (min-width: 541px) {
+//     .mix,
+//     .gap {
+//         width: calc(100%/3 - (((3 - 1) * 1rem) / 3));
+//     }
+// }
+
+// /* 4 Columns */
+
+// @media screen and (min-width: 961px) {
+//     .mix,
+//     .gap {
+//         width: calc(100%/4 - (((4 - 1) * 1rem) / 4));
+//     }
+// }
+
+// /* 5 Columns */
+
+// @media screen and (min-width: 1281px) {
+//     .mix,
+//     .gap {
+//         width: calc(100%/5 - (((5 - 1) * 1rem) / 5));
+//     }
+// }

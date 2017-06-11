@@ -7,7 +7,7 @@ module.exports = function(grunt) {
                     beautify: true,
                     compress: true
                 },
-                src: ['js/plugins.js', 'js/main.js'],
+                src: ['js/vendor/mixitup.min.js', 'js/plugins.js', 'js/main.js'],
                 dest: 'dist/script.min.js',
             },
             dev: {
@@ -16,7 +16,7 @@ module.exports = function(grunt) {
                     compress: false,
                     preserveComments: 'all'
                 },
-                src: ['js/plugins.js', 'js/main.js'],
+                src: ['js/vendor/mixitup.min.js', 'js/plugins.js', 'js/main.js'],
                 dest: 'dist/script.min.js',
             }
         },

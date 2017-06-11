@@ -25,56 +25,8 @@
 @import "footer";
 @import "contact";
 @import "testimonial";
+@import "works";
+@import "shame";
+@import "clients";
+@import "skills";
 
-
-
-.no-js #loader { 
-  display: none;  
-}
-
-.js #loader { 
-  display: block; position: absolute; left: 100px; top: 0; 
-}
-
-.se-pre-con {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background: url("../img/loader-64x/think.gif") center no-repeat #fff;
-}
-
-
-
-
-
-
-
-
-
-
-.container_elements {
-  @include margin(null auto);
-  @include padding(null $base-spacing);
-  max-width: 500px;
-}
-
-.row {
-  @include outer-container;
-}
-
-.button--col {
-  margin-bottom: 40px;
-  text-align: center;
-
-  @include media($medium-up) {
-    @include span-columns(8);
-    @include omega(3n);
-  }
-}
-
-.mb-10 {
-  margin-bottom: 10px;
-}

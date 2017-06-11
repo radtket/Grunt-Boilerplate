@@ -1,88 +1,21 @@
-/* ==============================
-   Skills
-   ============================== */
+// Spinner
 
-#skills {
-  .page-section__content {
-    color: $base-gray;
-  }
-  p.skills-text {
-    margin-bottom: $base-spacing * 2;
-    @include media($xsmall-only) {
-      margin-bottom: $base-spacing;
-    }
-  }
-  .list-check {
-    @include row;
-    li {
-      @include span-columns(12);
-      @include omega(2n);
-      position: relative;
-      &:before {
-        content: "\f00c";
-        font-family: fontawesome;
-        color: $color-gold;
-        margin-right: $small-spacing;
-      }
-    }
-  }
+.no-js #loader {
+  display: none;
 }
 
-/* ==============================
-   Client Slider
-   ============================== */
-
-#clients__slider {
-  .owl-item {
-    height: 100px;
-    text-align: center;
-
-    a.client-logo {
-      display: inline-block;
-      margin: 0 10%;
-
-      img.logo {
-        display: block;
-        margin: auto;
-        height: 100px;
-        filter: grayscale(100%);
-        transition: all 300ms linear;
-
-        &:hover {
-          filter: none;
-        }
-      }
-    }
-  }
+.js #loader {
+  display: block;
+  position: absolute;
+  left: 100px;
+  top: 0;
 }
 
-
-
-.logo-item {
-  height: 80px;
-  text-align: center;
-  opacity: .65;
-  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-
-  // added by me
-  margin: 0 10%;
-  display: inline-flex;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  img {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
-/* ==============================
-   Works Section
-   ============================== */
-
-.works-item {
-  @include span-columns(6 of 18);
+.se-pre-con {
+  @include size(100%);
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 9999;
+  background: url("../img/loader-64x/think.gif") center no-repeat #fff;
 }

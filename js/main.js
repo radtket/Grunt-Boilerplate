@@ -186,3 +186,10 @@ function initPageSliders() {
 
     })(jQuery);
 };
+
+
+
+
+var containerEl = document.querySelector('.mix__container');
+
+var mixer = mixitup(containerEl);

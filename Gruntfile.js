@@ -7,7 +7,7 @@ module.exports = function(grunt) {
                     beautify: true,
                     compress: true
                 },
-                src: ['js/vendor/mixitup.min.js', 'js/plugins.js', 'js/main.js'],
+                src: ['js/main.js'],
                 dest: 'dist/script.min.js',
             },
             dev: {
@@ -16,14 +16,33 @@ module.exports = function(grunt) {
                     compress: false,
                     preserveComments: 'all'
                 },
-                src: ['js/vendor/mixitup.min.js', 'js/plugins.js', 'js/main.js'],
+                src: ['js/main.js'],
                 dest: 'dist/script.min.js',
             }
         },
 
+        babel: {
+            options: {
+                sourceMap: true,
+                presets: ['es2015']
+            },
+            dist: {
+                files: {
+                    'dist/script.min.js' : 'js/main.js'
+                }
+            }
+        },
+
+
         watch: {
-            files: ['scss/**/*.scss', 'js/*.js'],
-            tasks: ['uglify:dev', 'sass:dev', 'postcss']
+            dev: {
+                files: ['scss/**/*.scss', 'js/*.js'],
+                tasks: ['sass:dev', 'postcss', 'babel']
+            },
+            build: {
+                files: ['scss/**/*.scss', 'js/*.js'],
+                tasks: ['sass:build', 'postcss', 'babel']
+            },
         },
         sass: {
             dev: {
@@ -49,6 +68,7 @@ module.exports = function(grunt) {
                 processors: [
                     require('pixrem')(), // add fallbacks for rem units
                     require('postcss-flexboxfixer'),
+                    require('postcss-flexbox'),
                     require('postcss-gradientfixer'),
                     require('autoprefixer')({
                         browsers: ['last 2 versions', 'ie >= 10']
@@ -64,7 +84,8 @@ module.exports = function(grunt) {
                 bsFiles: {
                     src: [
                         'dist/*.css',
-                        '*.html'
+                        '*.html',
+                        'clients/*.html'
                     ]
                 },
                 options: {
@@ -81,8 +102,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks('grunt-babel');
 
     // define default task
-    grunt.registerTask('default', ['browserSync', 'uglify:dev', 'sass:dev', 'postcss', 'watch']);
-    grunt.registerTask('build', ['uglify:build', 'sass:build']);
+    grunt.registerTask('default', ['browserSync', 'sass:dev', 'postcss', 'watch:dev']);
+    grunt.registerTask('build', ['browserSync', 'sass:build', 'postcss', 'watch:build']);
 };

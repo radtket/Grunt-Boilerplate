@@ -1,13 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700");
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
-
 @import "../node_modules/bourbon/app/assets/stylesheets/bourbon";
 
 @import "grid-settings";
 @import "../node_modules/bourbon-neat/app/assets/stylesheets/neat";
 @import "variables";
-@import "vendor/owl-carousel/owl.carousel";
 
 // Bitters
 
@@ -24,9 +19,93 @@
 @import "experience";
 @import "footer";
 @import "contact";
-@import "testimonial";
 @import "works";
 @import "shame";
-@import "clients";
 @import "skills";
+@import "potfolio__indvidual";
+@import "sliders";
+
+
+
+.swiper-container {
+  text-align: center;
+}
+
+.swiper-prev,
+.swiper-next {
+  @include size(25px);
+  line-height: 25px !important;
+  color: $dark-gray;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  margin: $small-spacing ($small-spacing / 2);
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  -webkit-font-smoothing: antialiased;
+
+  i {
+    @include position(relative, 0 null null 0);
+  }
+
+  span {
+    @include position(relative, 0 null null 0);
+  }
+
+  &:before {
+    @include size(100%);
+    @include position(absolute, 0 null null 0);
+    background: $white;
+    content: "";
+    display: inline-block;
+    border: 1px solid $dark-gray;
+    border-radius: $base-border-radius;
+    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  }
+
+  &:hover {
+    color: $white;
+
+    &:before {
+      background: $dark-gray;
+    }
+  }
+}
+
+
+
+
+.swiper__pagination {
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 100 !important;
+
+  &--item {
+    display: inline-block;
+    padding: 6px 4px;
+    zoom: 1;
+    
+    span {
+      -webkit-backface-visibility: visible;
+      background: rgba($black, .15);
+      display: block;
+      height: 3px;
+      transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+      // transition: opacity 200ms ease;
+      width: $base-spacing;
+    }
+
+    &.active,
+    &:hover {
+      span {
+        background: rgba($black, .40);
+      }
+    }
+  }
+}
+
+
+
 

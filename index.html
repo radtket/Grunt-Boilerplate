@@ -2,6 +2,7 @@
 <html class="no-js" lang="">
   <head>
     <title></title>
+    <!--     <title>Taylor Radtke: A Creative Mind</title> -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="">
@@ -12,17 +13,18 @@
     <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
-    <!-- CSS -->
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Oswald:200,300,400,500,600,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="scss/vendor/et-line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+    <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-    <!--     <link rel="stylesheet" type="text/css" href="node_modules/owl.carousel/dist/assets/owl.carousel.css"> -->
     <link rel="stylesheet" href="dist/application.css">
     <!-- Modernizr -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   </head>
   <body>
-  <div class="se-pre-con"></div>
+    <div class="se-pre-con"></div>
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -37,20 +39,20 @@
               <img src="img/logo__primary.svg" alt="" />
             </a>
           </div>
-          <div class="mobile-nav">
+          <div class="mobile-nav" id="js-mobile-menu">
             <i class="fa fa-bars"></i>
           </div>
           <!-- Main Menu -->
-          <div class="inner-nav desktop-nav">
+          <div class="inner-nav">
             <ul>
-              <li class="active"><a class="nav-link" href="#">About</a></li>
-              <li><a class="nav-link" href="#">Experience</a></li>
-              <li><a class="nav-link" href="#">Skills</a></li>
-              <li><a class="nav-link" href="#">Works</a></li>
-              <li><a class="nav-link" href="#">Contact</a></li>
+              <li class="active"><a class="nav-link" href="#about">About</a></li>
+              <li><a class="nav-link" href="#skills">Skills</a></li>
+              <li><a class="nav-link" href="#experience">Experience</a></li>
+              <li><a class="nav-link" href="#works">Works</a></li>
+              <li><a class="nav-link" href="#contact">Contact</a></li>
               <!-- Button -->
               <li class="nav_download">
-                <a class="btn btn-border-w nav-download_btn" href="#" target="_blank">
+                <a class="btn btn-border-w nav-download_btn" href="resume/resume__taylor-radtke.pdf" download>
                   <i class="fa fa-cloud-download"></i> Download CV
                 </a>
               </li>
@@ -61,7 +63,7 @@
       </nav>
       <!-- End Navigation panel -->
       <!-- Home Section -->
-      <section class="page-section hero-section" data-background="img/ece46dbd36f35314cf28ba883a808a2a9493c2b7_3-girl.jpg" id="home">
+      <section class="page-section hero-section" data-background="img/hero/hero__retina.jpg" id="about">
         <div class="page-section__container">
           <!-- Hero Content -->
           <div class="hero--profile">
@@ -75,30 +77,6 @@
                   <small>Taylor Radtke - a beautiful mind</small>
                 </p>
               </div>
-              <hr>
-              <!--               <div>
-                <h4 class="hero-profile_name">Profile</h4>
-                <div>
-                  <strong>DOB:</strong>
-                  05 Dec 1993
-                </div>
-                <div>
-                  <strong>Location:</strong>
-                  Washington, DC
-                </div>
-                <div>
-                  <strong>Phone:</strong>
-                  (804) 929-7374
-                </div>
-                <div>
-                  <strong>Email:</strong>
-                  <a href="#">info@taylorradtke.com</a>
-                </div>
-                <div>
-                  <strong>Status:</strong>
-                  Available
-                </div>
-              </div> -->
             </div>
           </div>
           <div class="hero--profile__image">
@@ -120,12 +98,26 @@
               For each project we establish relationships with partners who we know will help us create added value for your project. As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other. The way we undertake projects is based on permanently applying values that reinforce each other: socio-cultural value, experiental value, building-technical value and economical value.
             </p>
             <ul class="list-check">
-              <li>User Experience Design</li>
-              <li>Interface Design</li>
-              <li>Product Design</li>
-              <li>Branding Design</li>
-              <li>Digital Painting</li>
-              <li>Video Editing</li>
+              <li>HTML/CSS</li>
+              <li>Sass</li>
+              <li>Vanilla Javascript</li>
+              <li>jQuery</li>
+              <li>REST API</li>
+              <li>Website Otimization</li>
+              <li>SVG</li>
+              <li>PostgreSQL, MySQL</li>
+              <li>Wordpress</li>
+              <li>PHP</li>
+              <li>Sketch</li>
+              <li>Adobe Suite</li>
+              <li>Grunt</li>
+              <li>Gulp</li>
+              <li>Drupal</li>
+              <li>Node.js</li>
+              <li>Django</li>
+              <li>Python</li>
+              <li>Bootstrap</li>
+              <li>Foundation</li>
             </ul>
           </div>
         </div>
@@ -140,9 +132,9 @@
             <span>02</span>
           </div>
           <div class="page-section__content">
-            <div class="c-timeline">
-              <div class="c-timeline__item">
-                <div class="c-timeline__point"></div>
+            <div class="timeline">
+              <div class="timeline__item">
+                <div class="timeline__item--point"></div>
                 <div class="employers">
                   <div class="employers--details">
                     <div class="employers--details__timeframe">
@@ -159,14 +151,17 @@
                     </div>
                   </div>
                   <div class="employers__description">
-                    <p>
-                      Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
-                    </p>
+                    <ul>
+                      <li>Complete Website Redesign</li>
+                      <li>Creating custom landing pages for microsites</li>
+                      <li>Design and Developed Anual Conference site</li>
+                      <li>Integrating brand restrictions to a user friendly web experience</li>
+                    </ul>
                   </div>
                   </div><!-- /employers -->
-                  </div><!-- /c-timeline__item -->
-                  <div class="c-timeline__item">
-                    <div class="c-timeline__point"></div>
+                  </div><!-- /timeline__item -->
+                  <div class="timeline__item">
+                    <div class="timeline__item--point"></div>
                     <div class="employers">
                       <div class="employers--details">
                         <div class="employers--details__timeframe">
@@ -183,14 +178,16 @@
                         </div>
                       </div>
                       <div class="employers__description">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis.
-                        </p>
+                        <ul>
+                          <li>Custom CMS built on Python and Django</li>
+                          <li>Creating/Maintaing Microsites and Newsletters</li>
+                          <li>Developed and Designed, Email Newsletter Template</li>
+                        </ul>
                       </div>
                       </div><!-- /employers -->
-                      </div><!-- /c-timeline__item -->
-                      <div class="c-timeline__item">
-                        <div class="c-timeline__point"></div>
+                      </div><!-- /timeline__item -->
+                      <div class="timeline__item">
+                        <div class="timeline__item--point"></div>
                         <div class="employers">
                           <div class="employers--details">
                             <div class="employers--details__timeframe">
@@ -207,262 +204,183 @@
                             </div>
                           </div>
                           <div class="employers__description">
-                            <p>
-                              Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis faucibus. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh.
-                            </p>
+                            <ul>
+                              <li>Creating attention grabbing web ads</li>
+                              <li>Designing/Developing social media elements for multiple outlets </li>
+                              <li>Google Analytics tracking on custom web ads</li>
+                            </ul>
                           </div>
                           </div><!-- /employers -->
-                          </div><!-- /c-timeline__item -->
+                          </div><!-- /timeline__item -->
                         </div>
                       </div>
                     </div>
                   </section>
                   <!-- END // Experience Section -->
                   <hr class="page-section__divider">
-                  <!-- Clients Section -->
-                  <section class="page-section" id="clients">
-                    <div class="page-section__container">
-                      <div class="page-section__headline">
-                        <h3>Clients</h3>
-                        <span>03</span>
-                      </div>
-                      <div class="page-section__content">
-                        <div id="clients__slider" class="owl-carousel owl-theme">
-                          <!--                           <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__twm.svg" alt="">
-                          </a>
-                          <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__motleyFool.svg" alt="">
-                          </a>
-                          <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__belleAndJames.svg" alt="">
-                          </a>
-                          <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__aapa.svg" alt="">
-                          </a>
-                          <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__atown.png" alt="">
-                          </a>
-                          <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__donTito.svg" alt="">
-                          </a>
-                          <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__kabin.png" alt="">
-                          </a>
-                          <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__rs.svg" alt="">
-                          </a>
-                          <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__brown.png" alt="">
-                          </a>
-                          <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__kulture.png" alt="">
-                          </a>
-                          <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__riffa.svg" alt="">
-                          </a>
-                          <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__fish.svg" alt="">
-                          </a>
-                          <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__phenom.svg" alt="">
-                          </a>
-                          <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__beatdown.svg" alt="">
-                          </a>
-                          <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__crva.svg" alt="">
-                          </a>
-                          <a href="#" class="client-logo">
-                            <img class="logo" src="img/clients/clients__kai.svg"" alt="">
-                          </a> -->
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__twm.svg" alt="">
-                          </a>
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__motleyFool.svg" alt="">
-                          </a>
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__belleAndJames.svg" alt="">
-                          </a>
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__aapa.svg" alt="">
-                          </a>
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__atown.png" alt="">
-                          </a>
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__donTito.svg" alt="">
-                          </a>
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__kabin.png" alt="">
-                          </a>
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__rs.svg" alt="">
-                          </a>
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__brown.png" alt="">
-                          </a>
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__kulture.png" alt="">
-                          </a>
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__riffa.svg" alt="">
-                          </a>
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__fish.svg" alt="">
-                          </a>
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__phenom.svg" alt="">
-                          </a>
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__beatdown.svg" alt="">
-                          </a>
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__crva.svg" alt="">
-                          </a>
-                          <a href="#" class="logo-item">
-                            <img src="img/clients/clients__kai.svg"" alt="">
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                  <!-- END // Clients Section -->
-                  <hr class="page-section__divider">
                   <!-- Works Section -->
                   <section class="page-section" id="works">
                     <div class="page-section__container">
                       <div class="page-section__headline">
                         <h3>Works</h3>
-                        <span>04</span>
+                        <span>03</span>
                       </div>
                       <article class="page-section__content">
-<!--                         <div class="works-item">
-                          <img src="img/projects-4.jpg">
+                        <nav class="mix__nav">
+                          <a class="mix__nav--item" data-filter="all">
+                            <span>All</span>
+                          </a>
+                          <a class="mix__nav--item" data-filter=".print">
+                            <span>Print Design</span>
+                          </a>
+                          <a class="mix__nav--item" data-filter=".web">
+                            <span>Web Design</span>
+                          </a>
+                          <a class="mix__nav--item" data-filter=".branding">
+                            <span>Branding</span>
+                          </a>
+                        </nav>
+                        <div class="mix__container">
+                          <figure class="mix print">
+                            <a href="#">
+                              <div class="work-img">
+                                <img src="img/portfolio/rands/rands__porfolio.jpg" alt="">
+                              </div>
+                              <div class="work-intro">
+                                <h3 class="work-title">R&S Supply</h3>
+                                <span class="work-descr">Website Design x Development</span>
+                              </div>
+                            </a>
+                          </figure>
+                          <figure class="mix print">
+                            <a href="#">
+                              <div class="work-img">
+                                <img src="img/portfolio/greenCan/greenCan__porfolio.jpg" alt="">
+                              </div>
+                              <div class="work-intro">
+                                <h3 class="work-title">Green Can Lockers</h3>
+                                <span class="work-descr">Website Design x Development</span>
+                              </div>
+                            </a>
+                          </figure>
+                          <figure class="mix web">
+                            <a href="#">
+                              <div class="work-img">
+                                <img src="img/portfolio/greenCan/greenCan__porfolio--logo.jpg" alt="">
+                              </div>
+                              <div class="work-intro">
+                                <h3 class="work-title">Green Can Lockers</h3>
+                                <span class="work-descr">Logo Design x Branding</span>
+                              </div>
+                            </a>
+                          </figure>
+                          <figure class="mix branding">
+                            <a href="#">
+                              <div class="work-img">
+                                <img src="img/portfolio/twm/retargeting__twm--portfolio.jpg" alt="">
+                              </div>
+                              <div class="work-intro">
+                                <h3 class="work-title">Total Wine & More</h3>
+                                <span class="work-descr">Retargeting Advertisements</span>
+                              </div>
+                            </a>
+                          </figure>
+                          <figure class="mix print">
+                            <a href="#">
+                              <div class="work-img">
+                                <img src="img/portfolio/atown/atown__portfolio.jpg" alt="">
+                              </div>
+                              <div class="work-intro">
+                                <h3 class="work-title">A-Town Bar & Grill</h3>
+                                <span class="work-descr">Print/Social Media Flyers</span>
+                              </div>
+                            </a>
+                          </figure>
+                          <figure class="mix web">
+                            <a href="#">
+                              <div class="work-img">
+                                <img src="img/portfolio/riffa/riffa__portfolio.jpg" alt="">
+                              </div>
+                              <div class="work-intro">
+                                <h3 class="work-title">Riffa</h3>
+                                <span class="work-descr">Print Media x Album Art</span>
+                              </div>
+                            </a>
+                          </figure>
                         </div>
-                        <div class="works-item">
-                          <img src="img/projects-4.jpg">
-                        </div>
-                        <div class="works-item">
-                          <img src="img/projects-4.jpg">
-                        </div> -->
-
-
-        <div class="controls">
-            <a class="control" data-filter="all">
-              <span>All</span>
-            </a>
-            <a class="control" data-filter=".green">
-              <span>Print Design</span>
-            </a>
-            <a class="control" data-filter=".blue">
-              <span>Web Design</span>
-            </a>
-            <a class="control" data-filter=".pink">
-              <span>Branding</span>
-            </a>
-
-<!--             <button type="button" class="control" data-sort="default:asc">Asc</button>
-            <button type="button" class="control" data-sort="default:desc">Desc</button> -->
-        </div>
-
-        <div class="mix__container hover-color hide-titles">
-          <div class="mix green">
-            <a href="#">
-              <div class="work-img">
-                <img src="img/projects-4.jpg" alt="">
-              </div>
-              <div class="work-intro">
-                  <h3 class="work-title">R&S Supply</h3>
-                  <span class="work-descr">Print Design x Green</span>
-              </div>
-            </a>
-          </div>
-          <div class="mix green">
-            <a href="#">
-              <div class="work-img">
-                <img src="img/projects-4.jpg" alt="">
-              </div>
-              <div class="work-intro">
-                <h3 class="work-title">R&S Supply</h3>
-                <span class="work-descr">Print Design x Green</span>
-              </div>
-            </a>
-          </div>
-          <div class="mix blue">
-            <a href="#">
-              <div class="work-img">
-                <img src="img/projects-4.jpg" alt="">
-              </div>
-              <div class="work-intro">
-                <h3 class="work-title">R&S Supply</h3>
-                <span class="work-descr">Web Design x Blue</span>
-              </div>
-            </a>
-          </div>
-          <div class="mix pink">
-            <a href="#">
-              <div class="work-img">
-                <img src="img/projects-4.jpg" alt="">
-              </div>
-              <div class="work-intro">
-                <h3 class="work-title">R&S Supply</h3>
-                <span class="work-descr">Branding x Pink</span>
-              </div>
-            </a>
-          </div>
-          <div class="mix green">
-            <a href="#">
-              <div class="work-img">
-                <img src="img/projects-4.jpg" alt="">
-              </div>
-              <div class="work-intro">
-                <h3 class="work-title">R&S Supply</h3>
-                <span class="work-descr">Print Design x Green</span>
-              </div>
-            </a>
-          </div>
-          <div class="mix blue">
-            <a href="#">
-              <div class="work-img">
-                <img src="img/projects-4.jpg" alt="">
-              </div>
-              <div class="work-intro">
-                <h3 class="work-title">R&S Supply</h3>
-                <span class="work-descr">Web Design x Blue</span>
-              </div>
-            </a>
-          </div>
-          <div class="mix pink">
-            <a href="#">
-              <div class="work-img">
-                <img src="img/projects-4.jpg" alt="">
-              </div>
-              <div class="work-intro">
-                <h3 class="work-title">R&S Supply</h3>
-                <span class="work-descr">Branding x Pink</span>
-              </div>
-            </a>
-          </div>
-          <div class="mix blue">
-            <a href="#">
-              <div class="work-img">
-                <img src="img/projects-4.jpg" alt="">
-              </div>
-              <div class="work-intro">
-                <h3 class="work-title">R&S Supply</h3>
-                <span class="work-descr">Web Design x Blue</span>
-              </div>
-            </a>
-          </div>
-
-        </div>
-                        
                       </article>
                     </div>
                   </section>
                   <!-- END // Works Section -->
+                  <hr class="page-section__divider">
+                  <!-- Clients Section -->
+                  <section class="page-section">
+                    <div class="page-section__container">
+                      <div class="page-section__headline">
+                        <h3>Clients</h3>
+                        <span>04</span>
+                      </div>
+                      <div class="page-section__content">
+                        <div class="swiper-container clients__swiper">
+                          <div class="swiper-wrapper">
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/twm/clients__twm.svg" alt="">
+                            </div>
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/motley_fool/clients__motleyFool.svg" alt="">
+                            </div>
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/belle_james/clients__belleAndJames.svg" alt="">
+                            </div>
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/aapa/clients__aapa.svg" alt="">
+                            </div>
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/atown/client__atown.svg" alt="">
+                            </div>
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/don_tito/clients__donTito.svg" alt="">
+                            </div>
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/kabin/clients__kabin.png" alt="">
+                            </div>
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/r_s/clients__rs.svg" alt="">
+                            </div>
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/brown/clients__brown.svg" alt="">
+                            </div>
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/kulture/clients__kulture.png" alt="">
+                            </div>
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/riffa/clients__riffa.svg" alt="">
+                            </div>
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/fish/clients__fish.svg" alt="">
+                            </div>
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/phenom/clients__phenom.svg" alt="">
+                            </div>
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/beatdown/clients__beatdown.svg" alt="">
+                            </div>
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/crva/clients__crva.svg" alt="">
+                            </div>
+                            <div class="clients__swiper--item">
+                              <img src="img/clients/kai/clients__kai.svg"" alt="">
+                            </div>
+                          </div>
+                          <nav>
+                            <div class="swiper-prev"><i class="fa fa-angle-left"></i></div>
+                            <div class="swiper-next"><i class="fa fa-angle-right"></i></div>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- END // Clients Section -->
                   <hr class="page-section__divider">
                   <!-- Testimonials Section -->
                   <section class="page-section" id="testimonials">
@@ -472,28 +390,42 @@
                         <span>05</span>
                       </div>
                       <article class="page-section__content">
-                        <div id="testimonial__slider" class="owl-carousel owl-theme">
-                          <blockquote>
-                            <span>
-                              <img class="avi" src="img/testimonial__jon.jpg" alt="">
-                            </span>
-                            <p>" I am a small start up and I went to Taylor for a website. I am on limited funds and Taylor was able to go from inception to finish on time and on budget. I was very impressed, since being on a limited budget I was expecting a generic basic product but what I received was the opposite. Taylor talked to me and got the feel for my product and direction then went to work on the site. He produced a beautiful and professionally done website. Along the way when I neededsome "tweaks" Taylor was receptive but more importantly , Available. The tweaks were done fast and to my complete satisfaction. I recommend Taylor highly . If you want Champagne on a beer budget then Taylor is your web designer. "</p>
-                            <cite>Jon Winslow - Captain Jon's Green Can Lockers</cite>
-                          </blockquote>
-                          <blockquote>
-                            <span>
-                              <img class="avi" src="img/testimonial__jimmy.jpg" alt="">
-                            </span>
-                            <p>" I've worked with Taylor on flyers, t-shirt designs, stickers, collaborations between other artist and other projects over the past 4 years. With some projects/ideas being turned around with 24 hours. Great guy, very professional and a joy to work with. "</p>
-                            <cite>Jimmy Conway - Kulture</cite>
-                          </blockquote>
-                          <blockquote>
-                            <span>
-                              <img class="avi" src="img/testimonial__henri.jpg" alt="">
-                            </span>
-                            <p>" Taylor did an excellent job at communicating with me. He was very conscious of everything I desired, while at the same time making the work a reality. He also gave me wonderful ideas for branding, as well as helped me push my brand in the right direction. With Taylor's help, my social media sites increased traffic over 600% in a month. I would recommend Taylor to anyone that is interested. "</p>
-                            <cite>Henri Charuau - RIFFA</cite>
-                          </blockquote>
+                        <div class="swiper-container testimonial__swiper">
+                          <div class="swiper-wrapper">
+                            <div class="testimonial__swiper--item">
+                              <blockquote>
+                                <span>
+                                  <img class="avi" src="img/clients/green_can/testimonial__jon.jpg" alt="">
+                                </span>
+                                <p>" I am a small start up and I went to Taylor for a website. I am on limited funds and Taylor was able to go from inception to finish on time and on budget. I was very impressed, since being on a limited budget I was expecting a generic basic product but what I received was the opposite. Taylor talked to me and got the feel for my product and direction then went to work on the site. He produced a beautiful and professionally done website. Along the way when I neededsome "tweaks" Taylor was receptive but more importantly , Available. The tweaks were done fast and to my complete satisfaction. I recommend Taylor highly . If you want Champagne on a beer budget then Taylor is your web designer. "</p>
+                                <cite>Jon Winslow - Captain Jon's Green Can Lockers</cite>
+                              </blockquote>
+                            </div>
+                            <div class="testimonial__swiper--item">
+                              <blockquote>
+                                <span>
+                                  <img class="avi" src="img/clients/kulture/testimonial__jimmy.jpg" alt="">
+                                </span>
+                                <p>" I've worked with Taylor on flyers, t-shirt designs, stickers, collaborations between other artist and other projects over the past 4 years. With some projects/ideas being turned around with 24 hours. Great guy, very professional and a joy to work with. "</p>
+                                <cite>Jimmy Conway - Kulture</cite>
+                              </blockquote>
+                            </div>
+                            <div class="testimonial__swiper--item">
+                              <blockquote>
+                                <span>
+                                  <img class="avi" src="img/clients/riffa/testimonial__henri.jpg" alt="">
+                                </span>
+                                <p>" Taylor did an excellent job at communicating with me. He was very conscious of everything I desired, while at the same time making the work a reality. He also gave me wonderful ideas for branding, as well as helped me push my brand in the right direction. With Taylor's help, my social media sites increased traffic over 600% in a month. I would recommend Taylor to anyone that is interested. "</p>
+                                <cite>Henri Charuau - RIFFA</cite>
+                              </blockquote>
+                            </div>
+                          </div>
+                          <!-- Add Pagination -->
+                          <nav>
+                            <div class="swiper-prev"><i class="fa fa-angle-left"></i></div>
+                            <div class="swiper-next"><i class="fa fa-angle-right"></i></div>
+                          </nav>
+                          <div class="swiper__pagination"></div>
                         </div>
                       </article>
                     </div>
@@ -516,7 +448,7 @@
                               <i class="fa fa-phone"></i>
                             </div>
                             <span class="contact--info__title">Phone</span>
-                            <span class="contact--info__text">804-929-7374</span>
+                            <a class="contact--info__text" href="tel:+1-804-929-7374">804-929-7374</a>
                           </div>
                           <!-- End Phone -->
                           <!-- Address -->
@@ -526,7 +458,7 @@
                               <i class="fa fa-map-marker"></i>
                             </div>
                             <span class="contact--info__title">Location</span>
-                            <span class="contact--info__text">Washington DC</span>
+                            <a class="contact--info__text" href="https://goo.gl/maps/T7sBujABHYG2" target="_blank">Washington, DC</a>
                           </div>
                           <!-- End Address -->
                           <!-- Email -->
@@ -576,19 +508,29 @@
                       <p class="copyright">© 2017 <a href="#">Taylor Radtke</a>, All Rights Reserved.</p>
                       <ul class="footer-social-linkz">
                         <li>
-                          <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                          <a href="https://github.com/radtket" title="Github" target="_blank">
+                            <i class="fa fa-github"></i>
+                          </a>
                         </li>
                         <li>
-                          <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                          <a href="https://codepen.io/radtket/" title="Codepen" target="_blank">
+                            <i class="fa fa-codepen"></i>
+                          </a>
                         </li>
                         <li>
-                          <a href="#" title="Behance" target="_blank"><i class="fa fa-behance"></i></a>
+                          <a href="https://twitter.com/taylor_radtke" title="Twitter" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                          </a>
                         </li>
                         <li>
-                          <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+                          <a href="https://www.instagram.com/taylor.radtke" title="Instagram" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                          </a>
                         </li>
                         <li>
-                          <a href="#" title="Pinterest" target="_blank"><i class="fa fa-pinterest"></i></a>
+                          <a href="www.linkedin.com/in/radtket" title="LinkedIn+" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -596,9 +538,12 @@
                   <!-- END // Footer Section -->
                 </div>
                 <!-- JS -->
-                <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-                <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-                <script src="dist/script.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+                <script type="text/javascript" src="js/vendor/mixitup.min.js"></script>
+                <script type="text/javascript" src="dist/script.min.js"></script>
+                <script type="text/javascript">
+                  var containerEl = document.querySelector('.mix__container');
+                  var mixer = mixitup(containerEl);
+                </script>
               </body>
             </html>

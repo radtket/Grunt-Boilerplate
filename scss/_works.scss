@@ -2,94 +2,118 @@
    Works Section
    ============================== */
 
-.works-item {
-  @include span-columns(6 of 18);
-}
 
 
-
-/* Controls
----------------------------------------------------------------------- */
-
-.controls {
-  margin-bottom: $base-spacing * 2;
-  text-align: center;
-  cursor: default;
-}
-
-.control {
-  display: inline-block;
-  color: $medium-gray;
-  transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
-  cursor: pointer;
-  font-family: $heading-font-family;
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: calc(14px * .3);
-  text-indent: calc(14px * .3);
-  position: relative;
-  @include margin(null $base-spacing null null);
-  &:last-of-type {
-    @include margin(0);
+.mix {
+  &__container {
+    @include outer-container;
   }
-  &:hover {
-    color: $black;
-  }
-  @include media($small-down) {
-    @include margin(null $small-spacing null null);
-  }
-  // @include media($xsmall-only) {
-  //   @include margin(0 0 $small-spacing);
-  //   display: block;
-  // }
-  > span {
-    position: relative;
-    display: inline-block;
-    &:after {
-      @include position(absolute, 0 2px null null);
-      @include size(12px 2px);
-      content: "";
-      background-color: transparent;
+
+  &__nav {
+    margin-bottom: $base-spacing * 2;
+    text-align: center;
+    cursor: default;
+
+    &--item {
+      @include margin(null $base-spacing null null);
+      display: inline-block;
+      color: $medium-gray;
+      transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+      cursor: pointer;
+      font-family: $heading-font-family;
+      text-transform: uppercase;
+      font-size: rem(14px);
+      letter-spacing: .30em;
+      text-indent: .30em;
+      position: relative;
+      
+      @include media($small-down) {
+        @include margin(null $small-spacing null null);
+      }
+
+      &:last-of-type {
+        @include margin(0);
+      }
+
+      &:hover {
+        color: $black;
+      }
+
+      > span {
+        position: relative;
+        display: inline-block;
+
+        &:after {
+          @include position(absolute, 0 2px null null);
+          @include size(12px 2px);
+          content: "";
+          background-color: transparent;
+        }
+      }
     }
   }
 }
 
+
 .mixitup-control-active {
   color: $black;
   cursor: default;
+
   > span:after {
     background-color: $color-gold;
   }
-  
 }
 
-/* Container
----------------------------------------------------------------------- */
-
-.mix__container {
-  @include outer-container;
-}
 
 /* Target Elements
 ---------------------------------------------------------------------- */
 
+
+// FLEXBOX
+// .mix__container {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   align-content: flex-start;
+// }
+
+// .mix {
+//   width: 33.3333%;
+//   margin: 0;
+//   outline: none;
+//   overflow: hidden;
+//   position: relative;
+//   vertical-align: top;
+// }
+
+
+
+// EVEN SPACING
+// .mix {
+//   display: inline-block;
+//   margin: 0;
+//   outline: none;
+//   overflow: hidden;
+//   position: relative;
+//   width: 33%;
+// }
+
 .mix {
-  background: red;
   display: inline-block;
-  vertical-align: top;
-  margin: 0;
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
-  outline: 0;
-  width: 33.2%;
   float: left;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+  width: 33.33333%;
 
   @include media($xsmall-only) {
     // width: 100%;
     // float: none;
     width: 50%;
   }
+
 
   &:hover {
     .work-intro {
@@ -103,9 +127,11 @@
       &:after {
         background: rgba(20, 20, 20, 0.85);
         overflow: hidden;
+
         // background: rgba($white, 0.9);
         // background: $color-gold;
         // opacity: .73;
+     
       }
 
       > img {
@@ -122,10 +148,8 @@
     overflow: hidden;
     box-sizing: border-box;
     border: none;
-    outline: 0;
 
     &:hover {
-      color: #111;
       border: none;
       outline: 0;
     }
@@ -138,18 +162,15 @@
     &:after {
       @include position(absolute, 0 null null 0);
       @include size(100%);
-      overflow: hidden;
+      background: rgba($black, 0);
       content: " ";
       display: block;
-      background: rgba($black, 0);
+      overflow: hidden;
       transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
     }
 
-    > img {
-      transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
-    }
-
     img {
+      transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
       width: 100%;
       display: block;
       overflow: hidden;
@@ -159,70 +180,29 @@
   .work-intro {
     @include position(absolute, 40% null null 0);
     @include padding($small-spacing);
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
     opacity: 0;
+    overflow: hidden;
+    text-align: center;
     text-transform: uppercase;
+    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    width: 100%;
   }
 
   .work-title {
-    @include padding(0);
-    @include margin(0 0 8px 0);
+    margin-bottom: $small-spacing / 2;
     text-transform: uppercase;
     font-family: $heading-font-family;
-    font-size: 13px;
-    letter-spacing: calc(13px * .3);
-    text-indent: calc(13px * .3);
-    font-weight: 400;
-    letter-spacing: 0.2em;
-    line-height: $heading-line-height;
+    font-size: rem(13px);
+    letter-spacing: .30em;
+    text-indent: .30em;
     color: $color-gold;
   }
 
   .work-descr {
-    font-size: 11px;
+    font-size: rem(12px);
     color: $light-gray;
-    line-height: 1.2;
+    line-height: $heading-line-height;
     display: block;
+    letter-spacing: $base-letter-spacing;
   }
-
 }
-
-/* Grid Breakpoints
----------------------------------------------------------------------- */
-
-// /* 2 Columns */
-
-// .mix,
-// .gap {
-//     width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
-// }
-
-// /* 3 Columns */
-
-// @media screen and (min-width: 541px) {
-//     .mix,
-//     .gap {
-//         width: calc(100%/3 - (((3 - 1) * 1rem) / 3));
-//     }
-// }
-
-// /* 4 Columns */
-
-// @media screen and (min-width: 961px) {
-//     .mix,
-//     .gap {
-//         width: calc(100%/4 - (((4 - 1) * 1rem) / 4));
-//     }
-// }
-
-// /* 5 Columns */
-
-// @media screen and (min-width: 1281px) {
-//     .mix,
-//     .gap {
-//         width: calc(100%/5 - (((5 - 1) * 1rem) / 5));
-//     }
-// }

@@ -24,17 +24,17 @@
 
 
   &__item {
-    position: relative;
     color: $medium-gray;
-    overflow: hidden;
-    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
     margin-bottom: $base-spacing;
+    overflow: hidden;
+    position: relative;
     text-align: center;
+    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 
     @include media($medium-up) {
+      margin-bottom: $base-spacing * 1.5;
       padding-right: 67.5px;
       text-align: right;
-      margin-bottom: $base-spacing * 1.5;
     }
 
 
@@ -54,26 +54,26 @@
   &__icon {
     @include margin(0 auto 7.5px);
     @include size(45px 40px);
-    line-height: 40px;
-    font-size: 14px;
-    text-align: center;
     border-bottom: 1px solid $form-box-border;
+    font-size: rem(14px);
+    line-height: 40px;
+    text-align: center;
 
     @include media($medium-up) {
       @include position(absolute, 4px 7.5px null null);
-      margin: 0;
       border-bottom: none;
       border-left: 1px solid $form-box-border;
+      margin: 0;
     }
   }
 
   &__title {
     display: block;
-    margin-bottom: 4px;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-size: rem(12px);
+    font-weight: 600;
     letter-spacing: $base-letter-spacing;
+    margin-bottom: 4px;
+    text-transform: uppercase;
   }
 }
 
@@ -81,7 +81,7 @@
   @include clearfix;
   .form-tip {
     padding-top: $small-spacing;
-    font-size: 12px;
+    font-size: rem(12px);
     color: $medium-gray;
     @include media($medium-up) {
       @include span-columns(12);

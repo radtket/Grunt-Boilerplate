@@ -35,7 +35,7 @@ select[multiple] {
   box-sizing: border-box;
   color: $medium-gray;
   font-family: $base-font-family;
-  font-size: 12px;
+  font-size: rem(12px);
   height: 38px;
   letter-spacing: $base-letter-spacing;
   margin-bottom: $small-spacing;

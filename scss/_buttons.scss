@@ -1,14 +1,12 @@
-$color_log_cabin_90_approx: rgba(34, 34, 34, 0.9);
-$color_bunker_approx: #151515;
-$color_woodsmoke_approx: #111;
+
 
 #{$all-buttons},
 .btn {
   -webkit-font-smoothing: antialiased;
   appearance: none;
-  background: $color_log_cabin_90_approx;
+  background: rgba(34, 34, 34, 0.9);
   background: $dark-gray;
-  border-radius: 2px;
+  border-radius: $base-border-radius;
   border: 2px solid transparent;
   box-shadow: none;
   box-sizing: border-box;
@@ -92,8 +90,8 @@ $color_woodsmoke_approx: #111;
   }
 
   &.btn-border {
-    color: $color_bunker_approx;
-    border: 2px solid $color_bunker_approx;
+    color: $black-matte;
+    border: 2px solid $black-matte;
     background: transparent;
 
     &:hover {
@@ -133,29 +131,29 @@ $color_woodsmoke_approx: #111;
     background: transparent;
 
     &:hover {
-      color: $color_woodsmoke_approx;
+      color: $black-matte;
       border-color: transparent;
       background: $white;
     }
 
     &:focus {
-      color: $color_woodsmoke_approx;
+      color: $black-matte;
       border-color: transparent;
       background: $white;
     }
   }
 
   &.btn-w {
-    color: $color_woodsmoke_approx;
+    color: $black-matte;
     background: rgba($white, 0.8);
 
     &:hover {
-      color: $color_woodsmoke_approx;
+      color: $black-matte;
       background: $white;
     }
 
     &:focus {
-      color: $color_woodsmoke_approx;
+      color: $black-matte;
       background: $white;
     }
   }
@@ -165,12 +163,12 @@ $color_woodsmoke_approx: #111;
     background: $white;
 
     &:hover {
-      color: $color_bunker_approx;
+      color: $black-matte;
       background: $white;
     }
 
     &:focus {
-      color: $color_bunker_approx;
+      color: $black-matte;
       background: $white;
     }
   }

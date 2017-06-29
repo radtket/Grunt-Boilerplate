@@ -1,63 +1,56 @@
-(function($) {
-    "use strict"; // Start of use strict
+/* ---------------------------------------------
+Scripts initialization
+--------------------------------------------- */
+
+window.addEventListener('DOMContentLoaded', () => {
+    fadeOut(document.querySelector('.se-pre-con'));
+    window.dispatchEvent(new Event('scroll'));
+    window.dispatchEvent(new Event('resize'));
+});
 
 
-    /* ---------------------------------------------
-    Scripts initialization
-    --------------------------------------------- */
-
-    $(window).on('load', function() {
-        $(".se-pre-con").fadeOut("slow");;
-        $(window).trigger("scroll");
-        $(window).trigger("resize");
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    init_classic_menu();
+    initPageSliders();
+});
 
 
-    $(function() {
-        $(window).trigger("resize");
-        init_classic_menu();
-        initPageSliders();
-    });
-
-
-    $(window).on('resize', function() {
-        init_classic_menu_resize();
-    });
+window.onresize = () => {
+    init_classic_menu_resize();
+}
 
 
 
 
-    /* --------------------------------------------
-     Platform detect
-     --------------------------------------------- */
-    var mobileTest;
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        mobileTest = true;
-        $("html").addClass("mobile");
-    } else {
-        mobileTest = false;
-        $("html").addClass("no-mobile");
-    }
+/* --------------------------------------------
+Platform detect
+--------------------------------------------- */
+let mobileTest;
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    mobileTest = true;
+    document.documentElement.classList.add("mobile");
+} else {
+    mobileTest = false;
+    document.documentElement.classList.add("no-mobile");
+}
 
-    var mozillaTest;
-    if (/mozilla/.test(navigator.userAgent)) {
-        mozillaTest = true;
-    } else {
-        mozillaTest = false;
-    }
-    var safariTest;
-    if (/safari/.test(navigator.userAgent)) {
-        safariTest = true;
-    } else {
-        safariTest = false;
-    }
+let mozillaTest;
+if (/mozilla/.test(navigator.userAgent)) {
+    mozillaTest = true;
+} else {
+    mozillaTest = false;
+}
+let safariTest;
+if (/safari/.test(navigator.userAgent)) {
+    safariTest = true;
+} else {
+    safariTest = false;
+}
 
-    // Detect touch devices    
-    if (!("ontouchstart" in document.documentElement)) {
-        document.documentElement.className += " no-touch";
-    }
-
-
+// Detect touch devices    
+if (!("ontouchstart" in document.documentElement)) {
+    document.documentElement.className += " no-touch";
+}
 
 
     /* ---------------------------------------------
@@ -65,131 +58,191 @@
      --------------------------------------------- */
 
     // Sections backgrounds
+    var page_section = document.querySelectorAll(".home-section, .page-section, .small-section");
 
-    var pageSection = $(".home-section, .page-section, .small-section, .split-section");
-    pageSection.each(function(indx) {
-
-        if ($(this).attr("data-background")) {
-            $(this).css("background-image", "url(" + $(this).data("background") + ")");
+    page_section.forEach(function(indx) {
+        if (indx.hasAttribute("data-background")) {
+            indx.style.backgroundImage = "url(" + indx.dataset.background + ")";
         }
     });
 
+
+
     // Function for block height 100%
     function height_line(height_object, height_donor) {
-        height_object.height(height_donor.height());
-        height_object.css({
-            "line-height": height_donor.height() + "px"
-        });
+        height_object.style.height = height_donor.offsetHeight + "px";
+        height_object.style.lineHeight = height_donor.offsetHeight + "px";
     }
 
 
 
 
-    var mobile_nav = $(".mobile-nav");
-    var desktop_nav = $(".desktop-nav");
 
-    function init_classic_menu_resize() {
+// Fade Out
 
-        // Mobile menu max height
-        $(".mobile-on .desktop-nav > ul").css("max-height", $(window).height() - $(".main-nav").height() - 20 + "px");
+function fadeOut(el){
+  el.style.opacity = 1;
 
-        // Mobile menu style toggle
-        if ($(window).width() <= 1000) {
-            $(".main-nav").addClass("mobile-on");
-        } else
-        if ($(window).width() > 1000) {
-            $(".main-nav").removeClass("mobile-on");
-            desktop_nav.show();
+  (function fade() {
+    if ((el.style.opacity -= .1) < 0) {
+      el.style.display = "none";
+    } else {
+      requestAnimationFrame(fade);
+    }
+  })();
+}
+
+// Fade In
+function fadeIn(el, display){
+  el.style.opacity = 0;
+  el.style.display = display || "block";
+
+  (function fade() {
+    var val = parseFloat(el.style.opacity);
+    if (!((val += .1) > 1)) {
+      el.style.opacity = val;
+      requestAnimationFrame(fade);
+    }
+  })();
+}
+
+
+
+
+
+const main_nav = document.querySelector('.main-nav');
+const desktop_nav = document.querySelector(".inner-nav");
+const hamburger_menu = document.querySelector("#js-mobile-menu");
+
+
+
+function init_classic_menu_resize() {
+
+    let window_width = window.innerWidth;
+    let window_height = window.innerHeight;
+    let desktop_nav_ul = document.querySelector(".inner-nav").children;
+
+
+    desktop_nav.style.maxHeight =  window_height - desktop_nav.offsetHeight - 20 + "px";
+
+    if (window_width <= 1000) {
+        main_nav.classList.add("mobile-on");
+        desktop_nav.classList.add("closed");
+    } else if (window_width > 1000) {
+        main_nav.classList.remove("mobile-on");
+    }
+
+}
+
+
+
+function init_classic_menu() {
+
+    if (main_nav.classList.contains("transparent")) {
+        main_nav.classList.add("js-transparent");
+    }
+
+    window.onscroll = function() {
+        if (window.scrollY > 10) {
+            document.querySelector(".js-transparent").classList.remove("transparent");
+            document.querySelector(".nav-download_btn").classList.remove("btn-border-w");
+        } else {
+            document.querySelector(".js-transparent").classList.add("transparent");
+            document.querySelector(".nav-download_btn").classList.add("btn-border-w");
         }
     }
 
 
 
-    function init_classic_menu() {
+
+//   var menuToggle = $('#js-mobile-menu').unbind();
+//   $('#js-navigation-menu').removeClass("show");
+
+//   menuToggle.on('click', function(e) {
+//     e.preventDefault();
+//     $('#js-navigation-menu').slideToggle(function(){
+//       if($('#js-navigation-menu').is(':hidden')) {
+//         $('#js-navigation-menu').removeAttr('style');
+//       }
+//     });
+//   });
 
 
-        height_line($(".inner-nav > ul > li"), $(".main-nav"));
-        height_line(mobile_nav, $(".main-nav"));
+hamburger_menu.addEventListener("click", function(evnt){
+    evnt.preventDefault();
+    // desktop_nav.classList.toggle("closed");
+    // if (desktop_nav.style.display === 'none') {
+    //     desktop_nav.style.display = 'block';
+    // } else {
+    //     desktop_nav.style.display = 'none';
+    // }
 
 
-        // Transpaner menu
+if (desktop_nav.classList.contains('closed')) {
+    desktop_nav.classList.remove('closed');
+} else {
+    desktop_nav.classList.add('closed')
+}
 
-        if ($(".main-nav").hasClass("transparent")) {
-            $(".main-nav").addClass("js-transparent");
-        }
-
-        $(window).scroll(function() {
-
-            if ($(window).scrollTop() > 10) {
-                $(".js-transparent").removeClass("transparent");
-                $(".main-nav, .nav-logo, .mobile-nav, .nav_download").addClass("small-height");
-                $(".nav-download_btn").removeClass("btn-border-w");
-            } else {
-                $(".js-transparent").addClass("transparent");
-                $(".main-nav, .nav-logo, .mobile-nav, .nav_download").removeClass("small-height");
-                $(".nav-download_btn").addClass("btn-border-w");
-            }
-        });
-
-    }
+});
 
 
 
-})(jQuery); // End of use strict
+
+}
+
+
 
 
 /* ---------------------------------------------
  Sliders
  --------------------------------------------- */
+
+
 function initPageSliders() {
-    (function($) {
-        "use strict";
 
-        // Testimonial Slider
-        $('#testimonial__slider').owlCarousel({
-            items: 1,
-            loop: true,
-            nav: true,
-            center: true,
-            autoHeight: true,
-            navText: [
-              "<i class='fa fa-angle-left'></i>",
-              "<i class='fa fa-angle-right'></i>"
-            ],
-        })
-
-        // Client Logo slider
-        $('#clients__slider').owlCarousel({
-            items: 3,
-            loop: true,
-            pagination: false,
-            nav: true,
-            responsiveClass: true,
-            dots: false,
-            autoplay: true,
-            navText: [
-              "<i class='fa fa-angle-left'></i>",
-              "<i class='fa fa-angle-right'></i>"
-            ],
-            responsive: {
-                0: {
-                    items: 1,
-                },
-                600: {
-                    items: 3,
-                    slideBy: 3,
-                    autoplayHoverPause: true,
-                }
+    var client__slider = new Swiper('.clients__swiper', {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        slideClass: 'clients__swiper--item',
+        nextButton: '.swiper-next',
+        prevButton: '.swiper-prev',
+        breakpoints: {
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 40
+            },
+            900: {
+                slidesPerView: 3,
+                spaceBetween: 25
+            },
+            700: {
+                slidesPerView: 2,
+                spaceBetween: 25
+            },
+            600: {
+                slidesPerView: 1,
+                spaceBetween: 10
             }
-        });
+        }
+    });
 
 
-    })(jQuery);
+    var swiper = new Swiper('.testimonial__swiper', {
+        slideClass: 'testimonial__swiper--item',
+        nextButton: '.swiper-next',
+        prevButton: '.swiper-prev',
+        pagination: '.swiper__pagination',
+        autoHeight: true,
+        paginationClickable: true,
+        bulletClass: 'swiper__pagination--item',
+        bulletActiveClass: 'active',
+        paginationBulletRender: function(swiper, index, className) {
+            return '<div class="' + className + '">' + '<span></span>' + '</div>';
+        }
+
+    });
+
+
+
 };
-
-
-
-
-var containerEl = document.querySelector('.mix__container');
-
-var mixer = mixitup(containerEl);

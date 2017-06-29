@@ -17,7 +17,6 @@
   }
 
   &__headline {
-    @include span-columns(24);
     position: relative;
 
     @include media($medium-up) {
@@ -30,6 +29,7 @@
       font-size: rem(30px);
       letter-spacing: .10em;
       margin-bottom: rem(30px) * 2;
+      // margin-bottom: $base-spacing * 2;
       position: relative;
       text-transform: uppercase;
 
@@ -54,8 +54,6 @@
   }
 
   &__content {
-    @include span-columns(24);
-
     @include media($medium-up) {
       @include span-columns(18);
     }
@@ -66,11 +64,7 @@
 
 .small-section {
   @extend %page-section;
-  @include pad(70px $base-spacing);
-}
-
-.container {
-  @include outer-container;
+  @include padding(70px $base-spacing);
 }
 
 .page-section,

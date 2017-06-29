@@ -1,6 +1,8 @@
+$hero__bgimage--color: #212121;
+
 .hero--section {
   @extend %page-section;
-  background-color: #212121;
+  background-color: $hero__bgimage--color;
   @include media($small-down) {
     background-size: 100%;
     background-position: center top;
@@ -8,14 +10,12 @@
 }
 
 .hero--profile {
-  @include span-columns(24);
   text-align: center;
   @include media($medium-up) {
     @include span-columns(12);
   }
   @include media($large-up) {
     @include span-columns(10);
-    padding-top: 0;
   }
 
   &__name {
@@ -32,7 +32,7 @@
     letter-spacing: .30em;
     text-indent: .30em;
     text-transform: uppercase;
-    margin-bottom: 20px * 2;
+    margin-bottom: $base-spacing * 1.5;
     @include media($xsmall-only) {
       margin-bottom: $base-spacing;
     }
@@ -46,7 +46,6 @@
   }
 
   &__image {
-    @include span-columns(24);
     text-align: center;
     @include media($medium-up) {
       @include span-columns(12);
@@ -65,16 +64,17 @@
 
 
 .hero--signature {
-  position: relative;
-  overflow: hidden;
+  // position: relative;
+  // overflow: hidden;
   text-align: right;
   img {
-    width: 50%;
     display: inline-block;
     vertical-align: middle;
+    width: 50%;
   }
   &__footer {
     font-weight: $font-weight--bold;
+    letter-spacing: $base-letter-spacing;
     opacity: .5;
     text-transform: uppercase;
   }

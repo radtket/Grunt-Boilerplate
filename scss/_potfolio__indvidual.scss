@@ -1,0 +1,110 @@
+
+.work-navigation {
+  @include outer-container(100%);
+  @include fill-parent;
+  border-top: $base-border;
+  background: $white;
+  font-family: $heading-font-family;
+  text-transform: uppercase;
+  font-size: rem(11px);
+  letter-spacing: .30em;
+  text-indent: .30em;
+  z-index: 99;
+
+  .fa {
+    margin-top: -1px;
+    font-size: rem(12px);
+    vertical-align: middle;
+  }
+
+  .fa-times {
+    font-size: rem(16px);
+    margin-top: -4px;
+  }
+
+  a {
+    display: block;
+    float: left;
+    width: 33.33333%;
+    overflow: hidden;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: $dark-gray;
+    height: $navigation_small;
+    line-height: $navigation_small;
+    padding: 0 4%;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    &:visited {
+      color: $dark-gray;
+    }
+
+    &:hover {
+      color: $black-matte;
+      background: $color-gold;
+    }
+
+    &.work-prev {
+      text-align: left;
+    }
+
+    &.work-all {
+      text-align: center;
+    }
+
+    &.work-next {
+      text-align: right;
+    }
+  }
+}
+
+.project__hero {
+  background-attachment: fixed;
+  text-align: center;
+  height: 500px;
+  padding: 0;
+
+  &:before {
+    @include size(100%);
+    @include position(absolute, 0);
+    content: " ";
+    background: rgba($black, 0.6);
+  }
+
+  &--inner {
+    @include position(absolute, null 0 0);
+    display: block;
+    .hero--profile__position {
+      color: $medium-gray;
+    }
+  }
+}
+
+.project__intro--col {
+  text-align: center;
+  margin-bottom: $base-spacing;
+
+  @include media($medium-up) {
+    @include span-columns(6 of 18);
+  }
+
+
+  h4 {
+    font-family: $heading-font-family;
+    text-transform: uppercase;
+    font-size: rem(12px);
+    letter-spacing: .30em;
+    text-indent: .30em;
+    margin-bottom: $small-spacing / 2;
+  }
+
+  > p,
+  > a {
+    color: $dark-gray;
+  }
+
+  > a:hover {
+    color: lighten($dark-gray, 20%);
+  }
+}

@@ -15,9 +15,22 @@
   .list-check {
     @include row;
     li {
-      @include span-columns(12);
-      @include omega(2n);
       position: relative;
+      @include media($medium-up) {
+        @include span-columns(8);
+        @include omega(3n);
+      }
+
+      @include media($small-down) {
+        @include span-columns(12);
+        @include omega(2n);
+      }
+
+      @include media(new-breakpoint(min-width "#{$mq-xsmall}px" max-width "450px")) {
+        @include fill-parent;
+        display: block;
+      }
+
       &:before {
         content: "\f00c";
         font-family: fontawesome;

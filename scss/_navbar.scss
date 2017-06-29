@@ -1,220 +1,124 @@
-$navigation_large: 75px;
-$navigation_small: 55px;
-
-.small-height {
-	height: $navigation_small !important;
-	.inner-nav ul li {
-		height: $navigation_small !important;
-		line-height: $navigation_small !important;
-	}
-}
-
-
-
-
-
-
-.mobile-on {
-  .desktop-nav {
-    display: none;
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    // padding: 0 15px;
-    padding: 0;
-    z-index: 100;
-    ul {
-      width: 100%;
-      float: none;
-      background: rgba($black, .97);
-      position: relative;
-      overflow-x: hidden;
-      li {
-        display: block;
-        float: none !important;
-        overflow: hidden;
-        ul {
-          padding: 0;
-          border-bottom: 1px solid rgba($white, .1);
-        }
-        a {
-          display: block;
-          width: 100%;
-          height: 38px !important;
-          line-height: 38px !important;
-          position: relative;
-          padding: 0 10px;
-          text-align: left;
-          border-left: none;
-          border-right: none;
-          border-bottom: 1px solid rgba($white, .1);;
-          color: $medium-gray;
-          letter-spacing: 1px;
-          cursor: pointer;
-          &:hover,
-          &.active {
-            background: rgba($white, .3);;
-            color: $light-gray;
-          }
-        }
-      }
-    }
-    > ul {
-      overflow-y: auto;
-    }
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-.mobile-nav {
-  @include margin(null $base-spacing);
-  display: none;
-  float: right;
-  vertical-align: middle;
-  cursor: pointer;
-  user-select: none;
-  transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
-  .fa {
-    height: 100%;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 21px;
-  }
-}
-.no-js .mobile-nav {
-	@include size($navigation_small);
-}
-
-.mobile-on .mobile-nav {
-  display: table;
-  .fa {
-    color: $white;
-  }
-}
-
-
-
-
-
-
+$navigation_large  : 75px;
+$navigation_small  : 55px;
+$navigation_mobile : $navigation_large / 2;
 
 .main-nav {
+  @include fill-parent;
+
+  background: rgba(white, 0.97);
+  height: $navigation_small;
+  left: 0;
   position: fixed !important;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: $navigation_large;
-  background: rgba(white, 0.97);
-
   z-index: 1030;
   transition: height 0.27s cubic-bezier(0, 0, 0.58, 1);
+  box-shadow: 0 1px 1px rgba($black, 0.05);
 
   &_wrapper {
-  	@include outer-container(98%);
+    @include outer-container(98%);
     @include clearfix;
     position: relative;
   }
 
-  &.transparent{
-    background: transparent !important;
-  }
-  &.js-transparent{
+  &.js-transparent {
     transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
   }
 
-  &.small-height {
-  box-shadow: 0 1px 1px rgba($black, 0.05);
-  // box-shadow: 0 1px 1px rgba($black,0.5);
-      a.nav-link {
-        color: $dark-gray;
-
-        &:hover,
-        &.active {
-          background-color: $dark-gray;
-          color: $white;
-        }
-      }
-
-
-.mobile-nav .fa {
-  color: $dark-gray;
-}
-
-
-
-  }
-}
-
-.nav-logo_wrap {
-  @include margin(null $small-spacing);
-  float: left;
-
+  // Navbar Logo
   .nav-logo {
     display: table-cell;
-    vertical-align: middle;
+    height: $navigation_small;
     line-height: 0;
-    height: $navigation_large;
     transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
-
-    &.small-height {
-      img {
-        filter: invert(0%);
-        height: 35px;
-      }
-    }
-
-    img {
-      transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
-      height: $navigation_small;
-      max-height: 100%;
-      filter: invert(100%);
-    }
+    vertical-align: middle;
 
     &:before,
     &:after {
       display: none;
     }
+
+    img {
+      filter: invert(0%);
+      height: 35px;
+      transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+    }
+
+    &_wrap {
+      @include margin(null $small-spacing);
+      float: left;
+    }
+  }
+
+  // Hamburger Menu
+  .mobile-nav {
+    @include padding(null $base-spacing);
+    cursor: pointer;
+    display: table;
+    float: right;
+    user-select: none;
+    height: $navigation_small;
+    line-height: $navigation_small;
+    color: $dark-gray;
+    background: transparent;
+
+    transition-property: background, color;
+    transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+    margin-right: $small-spacing;
+
+    border-left: 1px solid $form-box-border;
+    border-right: 1px solid $form-box-border;
+
+    &:hover {
+      color: $white;
+      background: $dark-gray;
+    }
+
+
+
+    @include media($large-up) {
+      display: none;
+    }
+
+    .fa {
+      height: 100%;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 21px;
+    }
   }
 }
 
-.inner-nav {
-  display: inline-block;
-  position: relative;
-  float: right;
+.main-nav.transparent {
+  background: transparent !important;
+  box-shadow: none;
+  height: $navigation_large;
 
-  ul {
-    float: right;
+  .nav-logo {
+    height: $navigation_large;
 
-    li {
-      float: left;
-      position: relative;
-      height: $navigation_large;
-      line-height: $navigation_large;
+    > img {
+      filter: invert(100%);
+      height: $navigation_small;
+    }
+  }
 
-      a.nav-download_btn {
-        @include margin(null $small-spacing);
-      }
+  .mobile-nav {
+    height: $navigation_large;
+    line-height: $navigation_large;
+    border: 0;
 
+    .fa {
+      color: $white;
+    }
+  }
+
+  .inner-nav ul li {
+    height: $navigation_large;
+    line-height: $navigation_large;
+
+    @include media($large-up) {
       a.nav-link {
-        @include padding(null $base-spacing);
-        display: inline-block;
-        transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
-        font-family: $heading-font-family;
-        text-transform: uppercase;
-        font-size: 12px;
-        letter-spacing: calc(12px * .3);
-        text-indent: calc(12px * .3);
         color: $white;
 
         &:hover,
@@ -227,15 +131,129 @@ $navigation_small: 55px;
   }
 }
 
+.inner-nav {
+  display: inline-block;
+  position: relative;
+  float: right;
 
 
+  @include media($medium-down) {
+    @include position(absolute, 100% null null 0);
+    @include fill-parent;
+    @include padding(null $small-spacing);
+    z-index: 100;
+
+    // Hamburger Dropdown
+    display: block;
+    overflow-y: hidden;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+
+  }
+
+  &.closed {
+    max-height: 0 !important;
+  } 
+
+  ul {
+    float: right;
+
+    @include media($medium-down) {
+      @include fill-parent;
+      float: none;
+      background: rgba($black-matte, 0.97);
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
 
 
+    li {
+      display: inline-block;
+      float: left;
+      height: $navigation_small;
+      line-height: $navigation_small;
+      position: relative;
+
+      @include media($medium-down) {
+        display: block;
+        float: none;
+        height: $navigation_mobile !important;
+        line-height: $navigation_mobile !important;
+        overflow: hidden;
+        border-bottom: 1px solid rgba($white, 0.1);
+      }
 
 
+      &.nav_download {
+        @include margin(null $small-spacing);
 
-.no-svg .logo {
-  width: 200px;
-  height: 164px;
-  background-image: url(kiwi.png);
+        @include media($medium-down) {
+          margin: 0;
+          overflow: initial !important;
+
+          > .nav-download_btn {
+            font-family: $heading-font-family;
+            background: transparent;
+            font-size: rem(12px);
+            letter-spacing: .30em;
+            text-indent: .30em;
+            line-height: $navigation_mobile;
+            border: none;
+            border-radius: 0;
+            transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+
+            @include media($medium-down) {
+              @include padding(0 $small-spacing);
+              @include fill-parent;
+              display: block;
+              text-align: right;
+              color: $white;
+              cursor: pointer;
+
+              &:hover,
+              &.active {
+                background: rgba($black-matte, 0.9);
+                color: $color-gold;
+              }
+            }
+          }
+        }
+      }
+
+      a.nav-link {
+        @include padding(null $base-spacing);
+        display: inline-block;
+        font-family: $heading-font-family;
+        text-transform: uppercase;
+        font-size: rem(12px);
+        letter-spacing: .30em;
+        text-indent: .30em;
+        color: $dark-gray;
+        transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+
+        &:hover,
+        &.active {
+          background-color: $dark-gray;
+          color: $white;
+        }
+
+        @include media($medium-down) {
+          @include padding(0 $small-spacing);
+          @include fill-parent;
+          display: block;
+          text-align: right;
+          color: $white;
+          cursor: pointer;
+
+          &:hover,
+          &.active {
+            background: rgba($black-matte, 0.9);
+            color: $color-gold;
+          }
+        }
+      }
+    }
+  }
 }

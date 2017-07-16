@@ -1,19 +1,27 @@
 /* ==============================
-   Skills
-   ============================== */
+Skills
+============================== */
 
 #skills {
+  .page-section__divider {
+    @include margin($base-spacing null);
+  }
+
   .page-section__content {
     color: $base-gray;
   }
+
   p.skills-text {
     margin-bottom: $base-spacing * 2;
+
     @include media($xsmall-only) {
       margin-bottom: $base-spacing;
     }
   }
+
   .list-check {
     @include row;
+
     li {
       position: relative;
       @include media($medium-up) {
@@ -21,15 +29,61 @@
         @include omega(3n);
       }
 
+
       @include media($small-down) {
         @include span-columns(12);
         @include omega(2n);
       }
 
+
       @include media(new-breakpoint(min-width "#{$mq-xsmall}px" max-width "450px")) {
         @include fill-parent;
         display: block;
       }
+
+
+      &:before {
+        content: "\f00c";
+        font-family: fontawesome;
+        color: $color-gold;
+        margin-right: $small-spacing;
+      }
+    }
+  }
+
+  .skills__row {
+    margin-bottom: $base-spacing;
+    @include row;
+  }
+
+  .skills__row--items {
+    li {
+      font-size: rem(14px);
+      text-transform: uppercase;
+      color: $base-gray;
+      font-family: $heading-font-family;
+      letter-spacing: 1.5px;
+      line-height: 1;
+      margin-bottom: $small-spacing;
+      position: relative;
+
+      @include media($medium-up) {
+        @include span-columns(8);
+        @include omega(3n);
+      }
+
+
+      @include media($small-down) {
+        @include span-columns(12);
+        @include omega(2n);
+      }
+
+
+      @include media(new-breakpoint(min-width "#{$mq-xsmall}px" max-width "450px")) {
+        @include fill-parent;
+        display: block;
+      }
+
 
       &:before {
         content: "\f00c";

@@ -77,6 +77,7 @@ img,
 picture {
   @include margin(0);
   max-width: 100%;
+  display: block;
 }
 
 b, strong {
@@ -100,7 +101,23 @@ a:active {
   outline: none;
 }
 
-img:not([draggable]), embed, object, video {
+embed, object, video {
   max-width: 100%;
   height: auto;
 }
+
+figure {
+  @include margin(0 auto $small-spacing);
+}
+
+// Headlines
+
+.headline__small {
+  color: $base-font-color;
+  text-transform: uppercase;
+  font-family: $heading-font-family;
+  letter-spacing: rem(2px);
+  text-indent: rem(-2px);
+  font-size: rem(20px);
+}
+

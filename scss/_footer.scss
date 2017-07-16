@@ -10,39 +10,42 @@
     @include outer-container(98%);
   }
 
-  .copyright {
+  &__copyright {
     font-family: $heading-font-family;
     text-transform: uppercase;
     font-size: rem(12px);
     letter-spacing: .30em;
     text-indent: .30em;
+
+    > span {
+      color: $color-gold;
+    }
     
     @include media($small-up) {
       margin: 0;
       float: left;
-      height: $navigation_large;
-      line-height: $navigation_large;
+      height: $navigation_small;
+      line-height: $navigation_small;
     }
   }
 
-  .footer-social-linkz {
+  &--social {
     display: inline-block;
     @include media($small-up) {
       float: right;
     }
-
 
     li {
       margin-right: 1rem;
       float: left;
       position: relative;
       @include media($small-up) {
-        height: $navigation_large;
-        line-height: $navigation_large;
+        height: $navigation_small;
+        line-height: $navigation_small;
       }
     }
 
-    a {
+    &__link {
       @include size(25px);
       line-height: 25px !important;
       position: relative;

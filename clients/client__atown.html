@@ -2,6 +2,7 @@
 <html class="no-js" lang="">
   <head>
     <title></title>
+    <!--     <title>Taylor Radtke: A Creative Mind</title> -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="">
@@ -12,15 +13,13 @@
     <link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="../img/favicons/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="../img/favicons/apple-touch-icon-114x114.png">
-
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Oswald:200,300,400,500,600,700" rel="stylesheet">
-    
-    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Oswald:400" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="scss/vendor/et-line.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-    <!--     <link rel="stylesheet" type="text/css" href="node_modules/owl.carousel/dist/assets/owl.carousel.css"> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css" integrity="sha256-R7DnEprdmCwOOU8N+o2WIebJ5BJoWbJuGtJcGN7w2BI=" crossorigin="anonymous" />
     <link rel="stylesheet" href="../dist/application.css">
     <!-- Modernizr -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -37,24 +36,24 @@
         <div class="main-nav_wrapper">
           <!-- Logo ( * your text or image into link tag *) -->
           <div class="nav-logo_wrap">
-            <a href="#" class="nav-logo">
+            <a href="../index.html" class="nav-logo">
               <img src="../img/logo__primary.svg" alt="" />
             </a>
           </div>
-          <div class="mobile-nav">
+          <div class="mobile-nav" id="js-mobile-menu">
             <i class="fa fa-bars"></i>
           </div>
           <!-- Main Menu -->
-          <div class="inner-nav desktop-nav">
+          <div class="inner-nav">
             <ul>
-              <li class="active"><a class="nav-link" href="#">About</a></li>
-              <li><a class="nav-link" href="#">Experience</a></li>
-              <li><a class="nav-link" href="#">Skills</a></li>
-              <li><a class="nav-link" href="#">Works</a></li>
-              <li><a class="nav-link" href="#">Contact</a></li>
+              <li class="active"><a class="nav-link" href="../#about">About</a></li>
+              <li><a class="nav-link" href="../#skills">Skills</a></li>
+              <li><a class="nav-link" href="../#experience">Experience</a></li>
+              <li><a class="nav-link" href="../#works">Works</a></li>
+              <li><a class="nav-link" href="../#contact">Contact</a></li>
               <!-- Button -->
               <li class="nav_download">
-                <a class="btn btn-border-w nav-download_btn" href="#" target="_blank">
+                <a class="btn btn-border-w nav-download_btn" href="resume/resume__taylor-radtke.pdf" download>
                   <i class="fa fa-cloud-download"></i> Download CV
                 </a>
               </li>
@@ -63,66 +62,140 @@
           </div>
         </div>
       </nav>
-      <!-- End Navigation panel -->
-      <div class="page-section project__hero" data-background="http://yvetteirene.com/wp-content/uploads/2016/11/yvette-irene-a-town-bar-grill_28205510066_o-min.jpg">
-        <div class="bg-video-overlay bg-dark-alfa-30"></div>
-        <div class="project__hero--inner center">
-          <h1 class="hero--profile__name">A-TOWN BAR & GRILL</h1>
-          <h2 class="hero--profile__position">PRINT / SOCIAL MEDIA FLYERS</h2>
-        </div>
+      <div class="page-section project__hero" data-background="../img/clients/atown/hero__atown.jpg">
+        <span class="bg-video-overlay"></span>
+        <figure class="project__hero--inner">
+          <img class="project__hero--logo" src="../img/clients/atown/client__atown.svg">
+        </figure>
       </div>
-      <!-- Skills Section -->
-      <section class="page-section">
+
+
+
+      <!-- Project Details Section -->
+      <section class="small-section page-section">
         <div class="page-section__container">
           <div class="page-section__headline">
-            <h3>PROJECT DETAILS</h3>
+            <h3>Project Details</h3>
             <span>01</span>
           </div>
           <div class="page-section__content">
-            <div class="project__intro--col">
-              <h4>Client Name</h4>
-              <p>A-Town Bar &amp; Grill</p>
-            </div>
-            <div class="project__intro--col">
-              <h4>Time Frame</h4>
-              <p>Aug. 14' - Jan. 15'</p>
-            </div>
-            <div class="project__intro--col">
-              <h4>URL</h4>
-              <p>a-townballston.com</p>
-            </div>
+            <ul class="client__details">
+              <li class="client__details--label">Client:</li>
+              <li class="client__details--value">A-Town Bar & Grill</li>
+            </ul>
+            <ul class="client__details">
+              <li class="client__details--label">Date:</li>
+              <li class="client__details--value">August 2014 - January 2015</li>
+            </ul>
+            <ul class="client__details">
+              <li class="client__details--label">Type:</li>
+              <li class="client__details--value">Print/Social Media Flyers</li>
+            </ul>
           </div>
         </div>
       </section>
-      <!-- END // Skills Section -->
+      <!-- END // Project Details Section -->
+
+
+      <!-- Print Section -->
+      <section class="small-section page-section">
+        <div class="page-section__container">
+          <div class="page-section__headline">
+            <h3>Print</h3>
+            <span>02</span>
+          </div>
+          <article class="page-section__content">
+            <figure class="client__third">
+              <img src="../img/clients/atown/print/atown--print__carnevil--Retina-image-850x567.jpg">
+            </figure>
+            <figure class="client__third">
+              <img src="../img/clients/atown/print/atown--print__nye--Retina-image-850x567.jpg">
+            </figure>
+            <figure class="client__third">
+              <img src="../img/clients/atown/print/atown--print__vcu--Retina-image-850x567.jpg">
+            </figure>
+          </article>
+        </div>
+      </section>
+      <!-- END // Print Section -->
+
+
+      <!-- Video Section -->
+      <section class="small-section page-section">
+        <div class="page-section__container">
+          <div class="page-section__headline">
+            <h3>Video</h3>
+            <span>03</span>
+          </div>
+          <article class="page-section__content">
+            <div class="client__half">
+              <figure class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/ADvGru3hkS4?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+              </figure>
+            </div>
+            <div class="client__half">
+              <figure class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/52qckrWXXpU?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- END // Video Section -->
+
+
       <!-- Work Navigation -->
-      <div class="work-navigation clearfix">
-        <a href="portfolio-single-2.html" class="work-prev"><span><i class="fa fa-chevron-left"></i>&nbsp;Previous</span></a>
-        <a href="#" class="work-all"><span><i class="fa fa-times"></i>&nbsp;All works</span></a>
-        <a href="portfolio-single-4.html" class="work-next"><span>Next&nbsp;<i class="fa fa-chevron-right"></i></span></a>
-      </div>
-      <!-- End Work Navigation -->
+      <nav class="work-navigation">
+        <a href="../clients/client__atown.html" class="work-prev">
+          <span>
+            <i class="fa fa-chevron-left"></i>&nbsp;Previous
+          </span>
+        </a>
+        <a href="../#works" class="work-all">
+          <span>
+            <i class="fa fa-times"></i>&nbsp;All Works
+          </span>
+        </a>
+        <a href="#" class="work-next">
+          <span>
+            Next&nbsp;<i class="fa fa-chevron-right"></i>
+          </span>
+        </a>
+      </nav>
+      <!-- END //  Work Navigation -->
+
+
       <!-- END // Contact Section -->
       <hr class="page-section__divider">
       <!-- Footer Section -->
       <footer class="footer">
         <div class="footer__wrapper">
-          <p class="copyright">© 2017 <a href="#">Taylor Radtke</a>, All Rights Reserved.</p>
-          <ul class="footer-social-linkz">
+          <p class="footer__copyright">© 2017 <span>Taylor Radtke</span>, All Rights Reserved.</p>
+          <ul class="footer--social">
             <li>
-              <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a class="footer--social__link" href="https://github.com/radtket" title="Github" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
             </li>
             <li>
-              <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a class="footer--social__link" href="https://codepen.io/radtket/" title="Codepen" target="_blank">
+                <i class="fa fa-codepen"></i>
+              </a>
             </li>
             <li>
-              <a href="#" title="Behance" target="_blank"><i class="fa fa-behance"></i></a>
+              <a class="footer--social__link" href="https://twitter.com/taylor_radtke" title="Twitter" target="_blank">
+                <i class="fa fa-twitter"></i>
+              </a>
             </li>
             <li>
-              <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a class="footer--social__link" href="https://www.instagram.com/taylor.radtke" title="Instagram" target="_blank">
+                <i class="fa fa-instagram"></i>
+              </a>
             </li>
             <li>
-              <a href="#" title="Pinterest" target="_blank"><i class="fa fa-pinterest"></i></a>
+              <a class="footer--social__link" href="www.linkedin.com/in/radtket" title="LinkedIn+" target="_blank">
+                <i class="fa fa-linkedin"></i>
+              </a>
             </li>
           </ul>
         </div>
@@ -130,9 +203,8 @@
       <!-- END // Footer Section -->
     </div>
     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-    <script src="../dist/script.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js" integrity="sha256-ShAhm+50eq3u2njxZteHrfMlg/Nh+I1EtHL289p5gIM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../dist/script.min.js"></script>
   </body>
 </html>

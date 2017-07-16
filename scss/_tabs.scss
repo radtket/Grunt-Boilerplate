@@ -1,0 +1,134 @@
+
+.c-tabs {
+  /**/
+  @include outer-container(800px);
+  margin-bottom: 50px;
+}
+
+/**
+ * Tabs navigation
+ */
+
+.c-tabs-nav {
+  display: flex;
+  text-align: center;
+}
+
+.c-tabs-nav__link {
+  flex: 1;
+  text-align: center;
+  transition: all 0.3s;
+  background-color: transparent;
+  border-bottom: $base-border;
+  color: #666;
+  color: $base-gray;
+  padding: $small-spacing $base-spacing;
+  vertical-align: middle;
+  font-size: rem(15px);
+  text-transform: uppercase;
+  font-family: $heading-font-family;
+  letter-spacing: 1.5px;
+  margin-bottom: $small-spacing;
+  position: relative;
+
+  .the__number {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: rgba(51, 51, 51, 0.1);
+    font-weight: 700;
+    opacity: 0.75;
+    width: 100%;
+    font-size: 60px;
+    line-height: 1;
+  }
+
+
+  &:hover {
+    color: #6d6d6d;
+    color: $dark-gray;
+    border-color: $form-box-border;
+    box-shadow: 0 2px 1px -1px rgba(#000, 0.06);
+  }
+  &.is-active {
+    // color: #dc446e;
+    // background-color: #e7e7e7;
+
+    background-color: transparent;
+    border-width: 0 0 1px 0;
+    border-color: #0cbacf;
+    border-color: $color-gold;
+    color: #232323;
+    color: $black-matte;
+
+  }
+}
+
+// @media all and (min-width: 720px) {
+//   .c-tabs-nav__link {
+//     i {
+//       margin-bottom: 12px;
+//       font-size: 22px;
+//     }
+//     span {
+//       display: block;
+//     }
+//   }
+// }
+
+/**
+ * Tab
+ */
+
+.c-tab {
+  display: none;
+  // background-color: #e7e7e7;
+  &.is-active {
+    display: block;
+  }
+}
+
+.c-tab__content {
+  padding-top: $base-spacing;
+  text-align: center;
+
+  h5 {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 300;
+    text-transform: none;
+    color: #000;
+    margin-bottom: $base-spacing;
+  }
+
+  .lead {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: $base-spacing;
+    line-height: 1.5;
+    color: #666;
+  }
+
+  p {
+    color: #666;
+  }
+
+}
+
+/**
+ * Tabs no-js fallback
+ */
+
+.c-tabs.no-js {
+  .c-tabs-nav {
+    display: none;
+  }
+  .c-tab {
+    display: block;
+    margin-bottom: 1.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

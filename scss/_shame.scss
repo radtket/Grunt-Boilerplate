@@ -26,3 +26,48 @@
 
 
 
+
+
+
+.product__button {
+    margin: $base-spacing auto;
+    @include row;
+    .btn {
+      text-align: center;
+      @include media($medium-up) {
+        @include span-columns(12);
+      }
+    }
+}
+
+
+
+.alt-features-item {
+  text-align: center;
+}
+
+.alt-features-icon{
+  padding-top: $small-spacing;
+  font-size: 48px;
+  line-height: 1;
+  color: #111;
+  img{
+    width: 100%;
+  }
+}
+
+.alt-features-title {
+  margin-top: $base-spacing;
+  margin-bottom: $base-spacing;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+}
+
+.alt-features-descr {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.86
+}

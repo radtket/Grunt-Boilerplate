@@ -5,10 +5,8 @@
 }
 
 .js #loader {
+  @include position(absolute, 0 null 100px);
   display: block;
-  position: absolute;
-  left: 100px;
-  top: 0;
 }
 
 .se-pre-con {
@@ -18,4 +16,21 @@
   top: 0px;
   z-index: 9999;
   background: url("../img/loader-64x/Preloader_7.gif") center no-repeat #fff;
+}
+
+
+
+// Responsive Video Wrap
+.video-wrapper {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+  position: relative;
+
+  embed,
+  object,
+  iframe {
+    @include position(absolute, 0 null null 0);
+    @include size(100%);
+  }
 }

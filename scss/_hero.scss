@@ -1,81 +1,121 @@
 $hero__bgimage--color: #212121;
 
-.hero--section {
-  @extend %page-section;
-  background-color: $hero__bgimage--color;
-  @include media($small-down) {
-    background-size: 100%;
-    background-position: center top;
-  }
-}
+.hero {
+  &--section {
+    @extend %page-section;
+    background-color: $hero__bgimage--color;
 
-.hero--profile {
-  text-align: center;
-  @include media($medium-up) {
-    @include span-columns(12);
-  }
-  @include media($large-up) {
-    @include span-columns(10);
-  }
-
-  &__name {
-    color: $white;
-    font-size: rem(24px);
-    letter-spacing: .10em;
-    text-transform: uppercase;
-  }
-
-
-   &__position {
-    color: $base-gray;
-    font-size: rem(20px);
-    letter-spacing: .30em;
-    text-indent: .30em;
-    text-transform: uppercase;
-    margin-bottom: $base-spacing * 1.5;
-    @include media($xsmall-only) {
-      margin-bottom: $base-spacing;
+    @include media($small-down) {
+      background-size: 100%;
+      background-position: center top;
     }
-   }
-
-
-   &__text {
-    font-weight: $font-weight--light;
-    color: $light-gray;
-    text-align: justify;
   }
 
-  &__image {
+  &--profile {
     text-align: center;
+
     @include media($medium-up) {
       @include span-columns(12);
-      @include pad();
     }
+
     @include media($large-up) {
       @include span-columns(10);
-      @include shift(2);
-      padding-top: 0;
     }
-    > img {
+
+
+    &__name {
+      color: $white;
+      font-size: rem(24px);
+      letter-spacing: .10em;
+      text-transform: uppercase;
+    }
+
+    &__position {
+      color: $base-gray;
+      font-size: rem(20px);
+      letter-spacing: .30em;
+      text-indent: .30em;
+      text-transform: uppercase;
+      margin-bottom: $base-spacing * 1.5;
+
+      @include media($xsmall-only) {
+        margin-bottom: $base-spacing;
+      }
+    }
+
+    &__text {
+      font-weight: $font-weight--light;
+      color: $light-gray;
+      text-align: justify;
+    }
+
+    &__image {
+      text-align: center;
+
+      @include media($medium-up) {
+        @include span-columns(12);
+        @include pad;
+      }
+
+
+      @include media($large-up) {
+        @include span-columns(10);
+        @include shift(2);
+        padding-top: 0;
+      }
+
+      > img {
+        display: inline-block;
+      }
+    }
+  }
+
+  &--signature {
+    text-align: right;
+
+    img {
       display: inline-block;
+      vertical-align: middle;
+      width: 50%;
+    }
+
+    &__footer {
+      font-weight: $font-weight--bold;
+      letter-spacing: $base-letter-spacing;
+      opacity: .5;
+      text-transform: uppercase;
     }
   }
 }
 
 
-.hero--signature {
-  // position: relative;
-  // overflow: hidden;
-  text-align: right;
-  img {
-    display: inline-block;
-    vertical-align: middle;
-    width: 50%;
+
+
+
+
+
+
+
+.project__hero {
+  background-attachment: fixed;
+  text-align: center;
+  height: 500px;
+
+  &:before {
+    @include size(100%);
+    @include position(absolute, 0);
+    content: " ";
+    background: rgba($black, 0.6);
   }
-  &__footer {
-    font-weight: $font-weight--bold;
-    letter-spacing: $base-letter-spacing;
-    opacity: .5;
-    text-transform: uppercase;
+
+  &--inner {
+    @include position(absolute, null 0 $small-spacing);
+    display: block;
+  }
+
+   &--logo {
+    height: 85px !important;
+    display: block;
+    margin: auto;
   }
 }

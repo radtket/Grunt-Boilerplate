@@ -7,7 +7,7 @@ module.exports = function(grunt) {
                     beautify: true,
                     compress: true
                 },
-                src: ['js/main.js'],
+                src: ['dist/script.min.js'],
                 dest: 'dist/script.min.js',
             },
             dev: {
@@ -106,5 +106,5 @@ module.exports = function(grunt) {
 
     // define default task
     grunt.registerTask('default', ['browserSync', 'sass:dev', 'postcss', 'watch:dev']);
-    grunt.registerTask('build', ['browserSync', 'sass:build', 'postcss', 'watch:build']);
+    grunt.registerTask('build', ['sass:build', 'postcss', 'postcss', 'uglify:build']);
 };

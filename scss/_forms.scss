@@ -26,6 +26,7 @@ select {
 }
 
 #{$all-text-inputs},
+input[type="subject"],
 select[multiple] {
   background-color: $base-background-color;
   background-image: none;

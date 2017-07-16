@@ -12,9 +12,7 @@ $employers-gutter: $base-spacing * 2;
 
     &--point {
       @include size(rem(10px));
-
       @include position(absolute, rem(3px) null null rem(-31px));
-
       border-radius: $round-border-radius;
       box-shadow: 0 0 0 6px #fff;
       background: $color-gold;
@@ -23,12 +21,7 @@ $employers-gutter: $base-spacing * 2;
 }
 
 .employers {
-  padding-bottom: $base-spacing;
-
-  @include media($xlarge-up) {
-    padding-bottom: $employers-gutter;
-  }
-
+  padding-bottom: $employers-gutter;
 
   @include media($large-up) {
     margin-right: -$employers-gutter;
@@ -44,6 +37,7 @@ $employers-gutter: $base-spacing * 2;
       font-family: $base-font-family;
       letter-spacing: $base-letter-spacing;
       margin-bottom: $small-spacing * 0.66;
+      margin-bottom: $small-spacing / 2;
     }
 
     &__timeframe {
@@ -78,7 +72,6 @@ $employers-gutter: $base-spacing * 2;
   }
 
   &__description {
-
     @include media($large-up) {
       flex-basis: 66.6666%;
       flex-grow: 1;

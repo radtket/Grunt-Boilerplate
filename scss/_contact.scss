@@ -13,10 +13,14 @@
 }
 
 .contact--info {
+  
+  @include media($small-down) {
+    margin-bottom: $base-spacing;
+  }
+
   @include media($medium-up) {
     @include span-columns(8 of 18);
   }
-
 
   @include media($large-up) {
     @include span-columns(6 of 18);

@@ -1,11 +1,19 @@
 %page-section {
   @include fill-parent;
-  @include pad(140px $base-spacing);
+  @include padding(140px $base-spacing);
   display: block;
   position: relative;
   overflow: hidden;
   background: no-repeat fixed center center;
   background-size: cover;
+
+  @include media($small-down) {
+    @include padding(60px null);
+  }
+
+  @include media($medium-down) {
+    @include padding(80px null);
+  }
 }
 
 .page-section {
@@ -23,6 +31,7 @@
       @include span-columns(6);
     }
 
+
     h3 {
       color: $black;
       display: inline-block;
@@ -37,10 +46,10 @@
         @include position(absolute, 0 0 null null);
         @include size(20px 2px);
         content: '';
-        background-color: $dark-gray;
         background-color: $color-gold;
       }
     }
+
     span {
       display: block;
       position: absolute;
@@ -77,8 +86,8 @@
 }
 
 /* ==============================
-   IOS Background Fix
-   ============================== */
+IOS Background Fix
+============================== */
 
 .mobile {
   .page-section,
@@ -86,5 +95,32 @@
   .small-section,
   .hero-section {
     background-attachment: scroll;
+  }
+}
+
+.small-section.page-section {
+  @include media($medium-up) {
+    @include pad(140px $base-spacing);
+  }
+  .page-section__headline {
+    @include media($large-up) {
+      @include span-columns(6);
+    }
+
+
+    @include media($medium-down) {
+      @include span-columns(24);
+    }
+  }
+
+  .page-section__content {
+    @include media($large-up) {
+      @include span-columns(18);
+    }
+
+
+    @include media($medium-down) {
+      @include span-columns(24);
+    }
   }
 }

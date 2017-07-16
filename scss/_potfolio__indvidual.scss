@@ -1,3 +1,6 @@
+/* ==============================
+ Work Item Navigation
+============================== */
 
 .work-navigation {
   @include outer-container(100%);
@@ -23,18 +26,18 @@
   }
 
   a {
+    color: $dark-gray;
+    cursor: pointer;
     display: block;
     float: left;
-    width: 33.33333%;
-    overflow: hidden;
-    vertical-align: middle;
-    white-space: nowrap;
-    color: $dark-gray;
     height: $navigation_small;
     line-height: $navigation_small;
+    overflow: hidden;
     padding: 0 4%;
-    cursor: pointer;
     transition: all 0.3s ease-out;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 33.33333%;
 
     &:visited {
       color: $dark-gray;
@@ -59,52 +62,126 @@
   }
 }
 
-.project__hero {
-  background-attachment: fixed;
+
+
+/* ==============================
+ Branding Colors
+============================== */
+
+.colors {
+  @include padding($base-spacing null);
+  @include fill-parent;
+  max-width: none;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  color: $base-gray;
   text-align: center;
-  height: 500px;
-  padding: 0;
-
-  &:before {
-    @include size(100%);
-    @include position(absolute, 0);
-    content: " ";
-    background: rgba($black, 0.6);
+  text-transform: uppercase;
+  @include media($small-up) {
+    padding-top:$base-spacing * 2;
+    padding-bottom:$base-spacing * 2;
   }
+}
+.colors__headline {
+  @include margin(40px auto);
+  @include fill-parent;
+}
 
-  &--inner {
-    @include position(absolute, null 0 0);
-    display: block;
-    .hero--profile__position {
-      color: $medium-gray;
-    }
+.colors__item {
+  @include padding($small-spacing);
+  flex: 0 60px 0;
+  @include media($small-up) {
+    @include padding($base-spacing);
+    flex: 0 0 120px;
+  }
+}
+.colors__color {
+  width: 40px;
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 100%;
+  box-shadow: 0 0 0 4px $black-matte, 0 0 0 5px $dark-gray;
+  margin-bottom: $small-spacing / 2;
+  @include media($small-up) {
+    width: 80px;
+    box-shadow: 0 0 0 9px $black-matte, 0 0 0 10px $dark-gray;
+    margin-bottom: 1rem;
+  }
+}
+.colors__text {
+  font-size: rem(12px);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: $base-letter-spacing;
+  border-radius: 100px;
+  border: 1px solid $dark-gray;
+  color: $base-gray;
+  padding: 2px $small-spacing;
+  display: none;
+  @include media($small-up) {
+    display: inline-block;
   }
 }
 
-.project__intro--col {
-  text-align: center;
-  margin-bottom: $base-spacing;
+/* ==============================
+ Porfolio Item Layout
+============================== */
 
-  @include media($medium-up) {
+.client__details {
+  margin-bottom: $small-spacing / 2;
+  display: table;
+  table-layout: fixed;
+
+  // @include media($medium-up) {
+  //   @include span-columns(8);
+  //   text-align: center;
+  // }
+
+
+  > li {
+    display: table-cell;
+    vertical-align: middle;
+
+    // @include media($medium-up) {
+    //   display: block;
+    // }
+  }
+
+  &--label {
+    font-family: $heading-font-family;
+    font-size: rem(15px);
+    letter-spacing: 1.5px;
+    margin-bottom: $small-spacing / 2;
+    min-width: 80px;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  &--value {
+    color: $base-gray;
+  }
+}
+
+
+
+.client__third {
+  @include media($xsmall-only) {
+    max-width: 350px;
+  }
+
+
+  @include media($small-up) {
     @include span-columns(6 of 18);
   }
+}
 
-
-  h4 {
-    font-family: $heading-font-family;
-    text-transform: uppercase;
-    font-size: rem(12px);
-    letter-spacing: .30em;
-    text-indent: .30em;
-    margin-bottom: $small-spacing / 2;
+.client__half {
+  @include media($medium-up) {
+    @include span-columns(9 of 18);
   }
+}
 
-  > p,
-  > a {
-    color: $dark-gray;
-  }
-
-  > a:hover {
-    color: lighten($dark-gray, 20%);
-  }
+.client__two-third {
+  @include outer-container(600px);
 }

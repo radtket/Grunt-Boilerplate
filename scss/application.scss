@@ -106,16 +106,27 @@
   margin-bottom: $base-spacing;
   line-height: 1;
   letter-spacing: 0.01em;
-  font-size: rem(142px);
+  font-size: rem(60px);
   text-transform: uppercase;
+  @include media($small-down) {
+    margin-top: $base-spacing;
+  }
+  @include media($small-up) {
+    font-size: rem(100px);
+  }
+  @include media($medium-up) {
+    font-size: rem(140px);
+  }
   &--date {
     color: #717171;
     color: $medium-gray;
     text-transform: uppercase;
     font-family: $heading-font-family;
     letter-spacing: rem(2px);
-    text-indent: rem(-2px);
     font-size: rem(20px);
+    @include media($small-down) {
+      padding-left: $small-spacing / 2;
+    }
   }
 }
 
@@ -149,10 +160,12 @@
   &--desc {
     color: #717171;
     color: $medium-gray;
-    font-size: rem(24px);
-    font-weight: $font-weight--light;
+    font-size: rem(16px);
     margin-bottom: $base-spacing;
     line-height: $base-line-height;
+    @include media($small-up) {
+      font-size: rem(24px);
+    }
   }
 }
 
@@ -279,22 +292,6 @@ $color_woodsmoke_approx: #111;
 }
 
 
-
-
-
-.white-section {
-  @include fill-parent;
-  img {
-    @include media($small-up) {
-      margin: ($base-spacing * 2) auto;
-    }
-  }
-
-    img:first-of-type {
-      margin-top: 0;
-    }
-
-}
 
 
 

@@ -13,7 +13,6 @@
     <link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="../img/favicons/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="../img/favicons/apple-touch-icon-114x114.png">
-    <link rel="stylesheet" href="../dist/et-line.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Oswald:400" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -27,24 +26,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   </head>
   <body>
-    <div class="se-pre-con"></div>
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- Page Wrap -->
+
+    <!-- Page Loader -->        
+    <div class="page-loader">
+        <div class="loader">Loading...</div>
+    </div>
+
     <div class="page" id="top">
       <!-- Navigation panel -->
       <nav class="main-nav transparent">
         <div class="main-nav_wrapper">
-          <!-- Logo ( * your text or image into link tag *) -->
+
           <div class="nav-logo_wrap">
             <a href="../index.html" class="nav-logo">
               <img src="../img/logo__primary.svg" alt="" />
             </a>
           </div>
+
           <div class="mobile-nav" id="js-mobile-menu">
             <i class="fa fa-bars"></i>
           </div>
+
           <!-- Main Menu -->
           <div class="inner-nav">
             <ul>
@@ -53,6 +59,7 @@
               <li><a class="nav-link" href="../#experience">Experience</a></li>
               <li><a class="nav-link" href="../#works">Works</a></li>
               <li><a class="nav-link" href="../#contact">Contact</a></li>
+              
               <!-- Button -->
               <li class="nav_download">
                 <a class="btn btn-border-w nav-download_btn" href="resume/resume__taylor-radtke.pdf" download>
@@ -60,8 +67,10 @@
                 </a>
               </li>
               <!-- End Button -->
+
             </ul>
           </div>
+
         </div>
       </nav>
 
@@ -74,9 +83,9 @@
               <!-- Video BG Init -->
               <div class="bg-video-wrapper">
                 <div class="bg-video-overlay"></div>
-                <video class="covervid-video" autoplay loop>
-                  <source src="../bg_project2.webm" type="video/webm">
-                  <source src="../bg_project2.mp4" type="video/mp4">
+                <video class="covervid-video" autoplay loop poster="">
+                  <source src="../video/bg_project2.webm" type="video/webm">
+                  <source src="../video/bg_project2.mp4" type="video/mp4">
                 </video>
               </div>
                <!-- End Video BG Init -->
@@ -85,14 +94,16 @@
               <div class="home-content">
                 <div class="home-text">
 
-                  <h2 class="hero-project__title">R&S Supply<span class="hero-project__title--date">2014</span></h2>
+                  <h2 class="hero-project__title">Captain Jon's<span class="hero-project__title--date">2015</span></h2>
                   <div class="hero-project__wrap">
                     <span class="hero-project__line"></span>
                     <div class="hero-project__body">
-                      <p class="hero-project__body--desc">R&S Supply is one of America's largest wholesale distributor of roofing, siding, window and gutter materials, tools and supplies. They approached me to evaluate their website, and was able to produce a complete branding and web reseign.</p>
+                      <p class="hero-project__body--desc">
+                        Captain Jon's Green Can Locker's are a patented locking mechanism for ammunition based out of Southern California. Customers love the quality of the product, and the ease of installation.
+                      </p>
                       <p class="hero-project__role">Role</p>
                       <p class="hero-project__role--desc">Branding, Design, Development</p>
-                      <a class="hero-project__cta" href="//radtket.github.io/RandS/" target="_blank">Go check the website</a>
+                      <a class="hero-project__cta" href="//radtket.github.io/Green-Can-Lockers/" target="_blank">Go check the website</a>
                     </div>
                   </div>
                   
@@ -113,7 +124,7 @@
 
 
       <!-- Print Section -->
-      <section class="small-section">
+      <section id="project-start" class="small-section">
         <div class="page-section__container">
           <div class="page-section__headline">
             <h3>Branding</h3>
@@ -122,31 +133,32 @@
           <article class="page-section__content">
 
             <picture style="max-width: 400px; margin-left: auto; margin-right: auto;">
-              <img src="../img/clients/r_s/clients__rs.svg">
+              <img src="../img/clients/green_can/clients__green-can.svg">
             </picture>
 
             <hr class="page-section__divider">
 
             <figure class="colors">
               <!-- <h2 class="headline__small colors__headline">Project Colors</h2> -->
+
               <div class="colors__item">
-                <div class="colors__color" style="background-color:#F4F4F4;"></div>
-                <div class="colors__text">#F4F4F4</div>
+                <div class="colors__color" style="background-color:#262f1d;"></div>
+                <div class="colors__text">#262f1d</div>
               </div>
 
               <div class="colors__item">
-                <div class="colors__color" style="background-color:#D74B4B;"></div>
-                <div class="colors__text">#D74B4B</div>
+                <div class="colors__color" style="background-color:#748247;"></div>
+                <div class="colors__text">#748247</div>
               </div>
 
               <div class="colors__item">
-                <div class="colors__color" style="background-color:#475F77;"></div>
-                <div class="colors__text">#475F77</div>
+                <div class="colors__color" style="background-color:#333333;"></div>
+                <div class="colors__text">#333333</div>
               </div>
 
               <div class="colors__item">
-                <div class="colors__color" style="background-color:#354b5e;"></div>
-                <div class="colors__text">#354b5e</div>
+                <div class="colors__color" style="background-color:#E7E7E7;"></div>
+                <div class="colors__text">#E7E7E7</div>
               </div>
             </figure>
 
@@ -167,107 +179,14 @@
             <picture>
               <source 
                 media="(max-width: 650px)"
-                srcset="../img/clients/r_s/r%26s--1__mobile.png" alt="mobile">
+                srcset="../img/clients/green_can/gcl__mobile.png" alt="mobile">
               <source 
                 media="(max-width: 1000px)"
-                srcset="../img/clients/r_s/r%26s--1__tablet.png" alt="tablet">
+                srcset="../img/clients/green_can/gcl__tablet.png" alt="tablet">
               <img 
-                src="../img/clients/r_s/r%26s--1.png" 
+                src="../img/clients/green_can/gcl__desktop.png" 
                 alt="desktop">
             </picture>
-          </article>
-        </div>
-      </section>
-      <!-- END // Video Section -->
-
-
-
-
-      <!-- Video Section -->
-      <section class="small-section">
-        <div class="page-section__container">
-          <div class="page-section__headline">
-            <h3>Specialty</h3>
-            <span>03</span>
-          </div>
-          <article class="page-section__content">
-            <picture>
-              <source 
-                media="(max-width: 650px)"
-                srcset="../img/clients/r_s/r%26s--2__mobile.png" alt="mobile">
-              <source 
-                media="(max-width: 1000px)"
-                srcset="../img/clients/r_s/r%26s--2__tablet.png" alt="tablet">
-              <img 
-                src="../img/clients/r_s/r%26s--2.png" 
-                alt="desktop">
-            </picture>
-          </article>
-        </div>
-      </section>
-      <!-- END // Video Section -->
-
-
-      <!-- Video Section -->
-      <section class="small-section">
-        <div class="page-section__container">
-          <div class="page-section__headline">
-            <h3>Contact</h3>
-            <span>04</span>
-          </div>
-          <article class="page-section__content">
-            <picture>
-              <source 
-                media="(max-width: 650px)"
-                srcset="../img/clients/r_s/r%26s--3__mobile.png" alt="mobile">
-              <source 
-                media="(max-width: 1000px)"
-                srcset="../img/clients/r_s/r%26s--3__tablet.png" alt="tablet">
-              <img 
-                src="../img/clients/r_s/r%26s--3.png" 
-                alt="desktop">
-            </picture>
-          </article>
-        </div>
-      </section>
-      <!-- END // Video Section -->
-
-
-
-      <!-- Video Section -->
-      <section class="small-section">
-        <div class="page-section__container">
-          <div class="page-section__headline">
-            <h3>Locations</h3>
-            <span>05</span>
-          </div>
-          <article class="page-section__content">
-            <picture>
-              <source 
-                media="(max-width: 650px)"
-                srcset="../img/clients/r_s/r%26s--4__mobile.png" alt="mobile">
-              <source 
-                media="(max-width: 1000px)"
-                srcset="../img/clients/r_s/r%26s--4__tablet.png" alt="tablet">
-              <img 
-                src="../img/clients/r_s/r%26s--4.png" 
-                alt="desktop">
-            </picture>
-
-            <hr class="page-section__divider">
-
-            <picture>
-              <source 
-                media="(max-width: 650px)"
-                srcset="../img/clients/r_s/r%26s--5__mobile.png" alt="mobile">
-              <source 
-                media="(max-width: 1000px)"
-                srcset="../img/clients/r_s/r%26s--5__tablet.png" alt="tablet">
-              <img 
-                src="../img/clients/r_s/r%26s--5.png" 
-                alt="desktop">
-            </picture>
-
           </article>
         </div>
       </section>
@@ -277,7 +196,7 @@
 
       <!-- Work Navigation -->
       <nav class="work-navigation">
-        <a href="../clients/client__atown.html" class="work-prev">
+        <a href="./client__r%26s.html" class="work-prev">
           <span>
             <i class="fa fa-chevron-left"></i>&nbsp;Previous
           </span>
@@ -287,7 +206,7 @@
             <i class="fa fa-times"></i>&nbsp;All Works
           </span>
         </a>
-        <a href="#" class="work-next">
+        <a href="./client__r%26s.html" class="work-next">
           <span>
             Next&nbsp;<i class="fa fa-chevron-right"></i>
           </span>
@@ -334,13 +253,11 @@
       <!-- END // Footer Section -->
     </div>
     <!-- JS -->
-<script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-  crossorigin="anonymous"></script>
- 
 
 
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js" integrity="sha256-ShAhm+50eq3u2njxZteHrfMlg/Nh+I1EtHL289p5gIM=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../dist/covervid.min.js"></script>

@@ -76,7 +76,7 @@ module.exports = function(grunt) {
                 ]
             },
             dist: {
-                src: 'dist/*.css',
+                src: 'dist/application.css',
             },
         },
         browserSync: {

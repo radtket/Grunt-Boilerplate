@@ -1,21 +1,66 @@
 // Spinner
 
-.no-js #loader {
+.no-js .page-loader {
   display: none;
 }
 
-.js #loader {
-  @include position(absolute, 0 null 100px);
+.js .page-loader {
   display: block;
 }
 
-.se-pre-con {
+.page-loader {
   @include size(100%);
   position: fixed;
-  left: 0px;
-  top: 0px;
-  z-index: 9999;
-  background: url("../img/loader-64x/Preloader_7.gif") center no-repeat #fff;
+  top: 0;
+  left: 0;
+  background: $secondary-background-color;
+  z-index: 100000;
+}
+
+.loader {
+  @include size(50px);
+  @include margin(-25px 0 0 -25px);
+  @include position(absolute, 50% null null 50%);
+  font-size: 10px;
+  text-indent: -12345px;
+  border: 1px solid rgba($black, .8);
+  border-left: 1px solid rgba($black, .5);
+  border-radius: 50%;
+  animation: spinner 700ms infinite linear;
+  z-index: 100001;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 

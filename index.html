@@ -24,7 +24,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   </head>
   <body>
-    <div class="se-pre-con"></div>
+    <!-- Page Loader -->
+    <div class="page-loader">
+      <div class="loader">Loading...</div>
+    </div>
+    <!-- End Page Loader -->
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -43,7 +47,7 @@
             <i class="fa fa-bars"></i>
           </div>
           <!-- Main Menu -->
-          <div class="inner-nav">
+          <div id="js-navigation-menu" class="inner-nav js-opened">
             <ul>
               <li class="active"><a class="nav-link" href="#about">About</a></li>
               <li><a class="nav-link" href="#skills">Skills</a></li>
@@ -156,7 +160,7 @@
       <!-- Experience Section -->
       <section class="page-section" id="experience">
         <div class="page-section__container">
-          <div class="page-section__headline wow fadeInUp" data-wow-duration="1.2s">
+          <div class="page-section__headline">
             <h3>Experience</h3>
             <span>02</span>
           </div>
@@ -181,10 +185,7 @@
                   </div>
                   <div class="employers__description">
                     <ul>
-                      <li>Complete Website Redesign</li>
-                      <li>Creating custom landing pages for microsites</li>
-                      <li>Design and Developed Anual Conference site</li>
-                      <li>Integrating brand restrictions to a user friendly web experience</li>
+                      <li>Finished a complete website redesign in under 4 months, on a new CMS. Developed web-site mock-ups for clients to ensure quality control and client satisfaction before project development phase. Lead Designer and Developer for Annual Conference Site.</li>
                     </ul>
                   </div>
                   </div><!-- /employers -->
@@ -208,9 +209,7 @@
                       </div>
                       <div class="employers__description">
                         <ul>
-                          <li>Custom CMS built on Python and Django</li>
-                          <li>Creating/Maintaing Microsites and Newsletters</li>
-                          <li>Developed and Designed, Email Newsletter Template</li>
+                          <li>Developed and Designed Microsites, Newsletters. Developed and Designed, and Email Templates. UX tests to test the usability of mobile or websites. Designed All Gender Restroom Sign. </li>
                         </ul>
                       </div>
                       </div><!-- /employers -->
@@ -234,9 +233,7 @@
                           </div>
                           <div class="employers__description">
                             <ul>
-                              <li>Creating attention grabbing web ads</li>
-                              <li>Designing/Developing social media elements for multiple outlets </li>
-                              <li>Google Analytics tracking on custom web ads</li>
+                              <li>Responsible for designing and maintaining web banners in various formats to be displayed on any device, that were analyzed using Google Analytics and Google AdWords.</li>
                             </ul>
                           </div>
                           </div><!-- /employers -->
@@ -255,27 +252,41 @@
                         <span>03</span>
                       </div>
                       <article class="page-section__content">
-                        <nav class="mix__nav">
-                          <a class="mix__nav--item" data-filter="all">
-                            <span>All</span>
-                          </a>
-                          <a class="mix__nav--item" data-filter=".web">
-                            <span>Web</span>
-                          </a>
-                        </nav>
-                        <div class="mix__container">
-                          <figure class="mix web">
-                            <a href="./clients/client__atown.html">
+                        <ul class="works-grid">
+                          <!-- Work Item -->
+                          <li class="work-item">
+                            <a href="./clients/client__r%26s.html">
                               <div class="work-img">
-                                <img src="img/clients/atown/portfolio__atown.jpg" alt="">
+                                <img src="img/clients/r_s/temp/portfolio-thumb__r&s.jpg" alt="Work">
                               </div>
                               <div class="work-intro">
-                                <h3 class="work-title">A-Town Bar & Grill</h3>
-                                <span class="work-descr">Print x Social Media Flyers</span>
+                                <h3 class="work-title">R&S Supply</h3>
+                                <div class="work-descr">
+                                  Website
+                                </div>
                               </div>
                             </a>
-                          </figure>
-                        </div>
+                          </li>
+                          <!-- End Work Item -->
+                          <!-- Work Item -->
+                          <li class="work-item">
+                            <a href="./clients/client__gcl.html">
+                              <div class="work-img">
+                                <img src="img/clients/green_can/portfolio-thumb__r%26s--600.jpg" alt="Work">
+                              </div>
+                              <div class="work-intro">
+                                <h3 class="work-title">Captain Jon's</h3>
+                                <div class="work-descr">
+                                  Website
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                          <!-- End Work Item -->
+                          <!-- Work Item -->
+                          <img class="under-construction" src="img/construction.svg" alt="Work">
+                          <!-- End Work Item -->
+                        </ul>
                       </article>
                     </div>
                   </section>
@@ -479,27 +490,27 @@
                       <p class="footer__copyright">© 2017 <span>Taylor Radtke</span>, All Rights Reserved.</p>
                       <ul class="footer--social">
                         <li>
-                          <a class="footer--social__link" href="https://github.com/radtket" title="Github" target="_blank">
+                          <a class="footer--social__link" href="//github.com/radtket" title="Github" target="_blank">
                             <i class="fa fa-github"></i>
                           </a>
                         </li>
                         <li>
-                          <a class="footer--social__link" href="https://codepen.io/radtket/" title="Codepen" target="_blank">
+                          <a class="footer--social__link" href="//codepen.io/radtket/" title="Codepen" target="_blank">
                             <i class="fa fa-codepen"></i>
                           </a>
                         </li>
                         <li>
-                          <a class="footer--social__link" href="https://twitter.com/taylor_radtke" title="Twitter" target="_blank">
+                          <a class="footer--social__link" href="//twitter.com/taylor_radtke" title="Twitter" target="_blank">
                             <i class="fa fa-twitter"></i>
                           </a>
                         </li>
                         <li>
-                          <a class="footer--social__link" href="https://www.instagram.com/taylor.radtke" title="Instagram" target="_blank">
+                          <a class="footer--social__link" href="//www.instagram.com/taylor.radtke" title="Instagram" target="_blank">
                             <i class="fa fa-instagram"></i>
                           </a>
                         </li>
                         <li>
-                          <a class="footer--social__link" href="www.linkedin.com/in/radtket" title="LinkedIn+" target="_blank">
+                          <a class="footer--social__link" href="//www.linkedin.com/in/radtket" title="LinkedIn+" target="_blank">
                             <i class="fa fa-linkedin"></i>
                           </a>
                         </li>
@@ -509,15 +520,12 @@
                   <!-- END // Footer Section -->
                 </div>
                 <!-- JS -->
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js" integrity="sha256-1OxYPHYEAB+HIz0f4AdsvZCfFaX4xrTD9d2BtGLXnTI=" crossorigin="anonymous"></script>
+                <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+                <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
+                <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js" integrity="sha256-ShAhm+50eq3u2njxZteHrfMlg/Nh+I1EtHL289p5gIM=" crossorigin="anonymous"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=" crossorigin="anonymous"></script>
-                <script type="text/javascript" src="js/vendor/mixitup.min.js"></script>
-                <script type="text/javascript" src="dist/script.min.js"></script>
                 <script type="text/javascript" src="dist/contact-form.js"></script>
-<!--                 <script type="text/javascript">
-                var containerEl = document.querySelector('.mix__container');
-                var mixer = mixitup(containerEl);
-                </script> -->
+                <script type="text/javascript" src="dist/script.min.js"></script>
               </body>
             </html>

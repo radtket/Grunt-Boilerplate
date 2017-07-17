@@ -89,7 +89,8 @@ input {
   &[type="text"],
   &[type="tel"],
   &[type="url"],
-  &[type="password"] {
+  &[type="password"],
+  &[type="subject"] {
     appearance: none;
   }
 }

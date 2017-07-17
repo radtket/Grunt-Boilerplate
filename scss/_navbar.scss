@@ -26,6 +26,7 @@ $navigation_mobile : $navigation_large / 2;
 
   // Navbar Logo
   .nav-logo {
+    transform: translateY(0px);
     display: table-cell;
     height: $navigation_small;
     line-height: 0;
@@ -92,10 +93,26 @@ $navigation_mobile : $navigation_large / 2;
 .main-nav.transparent {
   background: transparent !important;
   box-shadow: none;
-  height: $navigation_large;
+  // height: $navigation_large;
+
+  &.mobile-on {
+    background: rgba(255, 255, 255, 0.97);
+  }
+
+  &.mobile-on .inner-nav ul li {
+    transform: translateY(0px);
+  }
+
+  &.mobile-on .nav-logo{
+    transform: translateY(0px);
+    > img {
+      height: 35px;
+    }
+  }
 
   .nav-logo {
-    height: $navigation_large;
+    // height: $navigation_large;
+    transform: translateY(10px);
 
     > img {
       filter: invert(100%);
@@ -104,8 +121,8 @@ $navigation_mobile : $navigation_large / 2;
   }
 
   .mobile-nav {
-    height: $navigation_large;
-    line-height: $navigation_large;
+    // height: $navigation_large;
+    // line-height: $navigation_large;
     border: 0;
 
     .fa {
@@ -114,8 +131,10 @@ $navigation_mobile : $navigation_large / 2;
   }
 
   .inner-nav ul li {
-    height: $navigation_large;
-    line-height: $navigation_large;
+    // height: $navigation_large;
+    // line-height: $navigation_large;
+    transform: translateY(10px);
+    transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
 
     @include media($large-up) {
       a.nav-link {
@@ -123,8 +142,8 @@ $navigation_mobile : $navigation_large / 2;
 
         &:hover,
         &.active {
-          background-color: $white;
-          color: $dark-gray;
+          background-color: transparent;
+          color: $color-gold;
         }
       }
     }
@@ -144,17 +163,17 @@ $navigation_mobile : $navigation_large / 2;
     z-index: 100;
 
     // Hamburger Dropdown
-    display: block;
+    display: none;
     overflow-y: hidden;
-    // transition-property: all;
-    // transition-duration: 1s;
-    // transition-timing-function: ease-in-out;
-    transition: all 0.75s cubic-bezier(0, 0, 0.58, 1)
+    // // transition-property: all;
+    // // transition-duration: 1s;
+    // // transition-timing-function: ease-in-out;
+    // transition: all 0.75s cubic-bezier(0, 0, 0.58, 1)
 
   }
 
-  &.closed {
-    max-height: 0 !important;
+  &.js-opened {
+    display: block;
   } 
 
   ul {
@@ -171,11 +190,13 @@ $navigation_mobile : $navigation_large / 2;
 
 
     li {
+      transform: translateY(0px);
       display: inline-block;
       float: left;
       height: $navigation_small;
       line-height: $navigation_small;
       position: relative;
+      transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
 
       @include media($medium-down) {
         display: block;
